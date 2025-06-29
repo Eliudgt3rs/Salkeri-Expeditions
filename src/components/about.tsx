@@ -13,10 +13,10 @@ export default function About() {
               Welcome to Salkeri Expeditions
             </h2>
             <p className="text-lg text-foreground/80">
-              We are a boutique, family-owned tour operator specializing in private, tailor-made safaris in Tanzania. Our deep-rooted connection to this land and its wildlife allows us to craft truly authentic and unforgettable experiences.
+              We are a proressional, family-owned tour operator specializing in private, tailor-made safaris in Tanzania and Kenya. Our deep-rooted connection to this land and its wildlife allows us to craft truly authentic and unforgettable experiences.
             </p>
             <p className="text-lg text-foreground/80">
-              Your journey is more than just a trip; it's a story waiting to be written. From the endless plains of the Serengeti to the pristine beaches of Zanzibar, we handle every detail with care, ensuring a seamless and extraordinary adventure.
+              Your journey is more than just a trip; it's a story waiting to be written. From the endless plains of the Serengeti to the pristine beaches of Diani, we handle every detail with care, ensuring a seamless and extraordinary adventure.
             </p>
             <Button size="lg" asChild className="bg-accent hover:bg-accent/90 text-white">
               <Link href="/about">Learn More About Us</Link>
