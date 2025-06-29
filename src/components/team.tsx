@@ -11,10 +11,10 @@ const teamMembers = [
     imageHint: "safari guide"
   },
   {
-    name: "Amina Abdalla",
+    name: "Amy Kuki",
     role: "Safari Operations Manager",
     specialty: "Ensures every detail of your journey is seamless and perfect.",
-    image: "/Amina.avif",
+    image: "/Amina.webp",
     imageHint: "travel planner"
   },
   {
