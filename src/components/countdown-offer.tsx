@@ -1,0 +1,96 @@
+"use client";
+
+import { useState, useEffect } from 'react';
+import { Button } from './ui/button';
+import Link from 'next/link';
+
+type TimeLeft = {
+  days: number;
+  hours: number;
+  minutes: number;
+  seconds: number;
+};
+
+const CountdownOffer = () => {
+  const [timeLeft, setTimeLeft] = useState<TimeLeft | null>(null);
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+    
+    const calculateTimeLeft = (): TimeLeft | null => {
+      const difference = +new Date('2024-12-31T23:59:59') - +new Date();
+      if (difference > 0) {
+        return {
+          days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+          hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
+          minutes: Math.floor((difference / 1000 / 60) % 60),
+          seconds: Math.floor((difference / 1000) % 60)
+        };
+      }
+      return null;
+    };
+
+    setTimeLeft(calculateTimeLeft());
+
+    const timer = setInterval(() => {
+      setTimeLeft(calculateTimeLeft());
+    }, 1000);
+
+    return () => clearInterval(timer);
+  }, []);
+  
+  const renderCountdown = () => {
+    if (!isMounted) {
+      // Server-side render or initial client render before mount
+      return (
+        <div className="flex justify-center gap-4 md:gap-8">
+          <div className="flex flex-col items-center"><span className="text-4xl md:text-5xl font-bold text-primary tracking-tighter">--</span><span className="text-sm uppercase text-foreground/80 tracking-widest">days</span></div>
+          <div className="flex flex-col items-center"><span className="text-4xl md:text-5xl font-bold text-primary tracking-tighter">--</span><span className="text-sm uppercase text-foreground/80 tracking-widest">hours</span></div>
+          <div className="flex flex-col items-center"><span className="text-4xl md:text-5xl font-bold text-primary tracking-tighter">--</span><span className="text-sm uppercase text-foreground/80 tracking-widest">minutes</span></div>
+          <div className="flex flex-col items-center"><span className="text-4xl md:text-5xl font-bold text-primary tracking-tighter">--</span><span className="text-sm uppercase text-foreground/80 tracking-widest">seconds</span></div>
+        </div>
+      );
+    }
+
+    if (timeLeft) {
+      return (
+        <div className="flex justify-center gap-4 md:gap-8">
+          {Object.entries(timeLeft).map(([interval, value]) => (
+            <div key={interval} className="flex flex-col items-center">
+              <span className="text-4xl md:text-5xl font-bold text-primary tracking-tighter">
+                {String(value).padStart(2, '0')}
+              </span>
+              <span className="text-sm uppercase text-foreground/80 tracking-widest">{interval}</span>
+            </div>
+          ))}
+        </div>
+      );
+    }
+
+    return <span className="text-xl font-bold">Offer has expired!</span>;
+  };
+
+  return (
+    <section id="offer" className="w-full py-16 md:py-20 bg-card">
+      <div className="container mx-auto px-4 md:px-6">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="font-headline text-3xl md:text-4xl font-bold tracking-tight text-primary">
+            Limited Time Offer
+          </h2>
+          <p className="mt-4 text-lg text-foreground/80">
+            Book your dream 2025 safari adventure before the end of the year and receive an exclusive 15% discount on any package.
+          </p>
+          <div className="my-8 h-20 flex items-center justify-center">
+            {renderCountdown()}
+          </div>
+          <Button size="lg" asChild className="bg-primary hover:bg-primary/90 text-primary-foreground">
+            <Link href="#contact">Claim Your Discount</Link>
+          </Button>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default CountdownOffer;
