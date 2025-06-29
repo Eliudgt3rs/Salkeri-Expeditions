@@ -44,7 +44,7 @@ export default function AboutPage() {
               </div>
               <div className="flex items-center justify-center">
                 <Image
-                  src="https://placehold.co/600x700.png"
+                  src="https://images.unsplash.com/photo-1531201859598-c6d98a7215b2?q=80&w=1974&auto=format&fit=crop"
                   alt="A Maasai guide looking over the savanna"
                   width={600}
                   height={700}

@@ -7,21 +7,21 @@ const teamMembers = [
     name: "Jomo Kenyatta",
     role: "Founder & Lead Guide",
     specialty: "Expert in wildlife tracking and photographic safaris.",
-    image: "https://placehold.co/400x400.png",
+    image: "https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=80&w=1780&auto=format&fit=crop",
     imageHint: "safari guide"
   },
   {
     name: "Amina Abdalla",
     role: "Safari Operations Manager",
     specialty: "Ensures every detail of your journey is seamless and perfect.",
-    image: "https://placehold.co/400x400.png",
+    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1974&auto=format&fit=crop",
     imageHint: "travel planner"
   },
   {
     name: "David Kimani",
     role: "Senior Safari Guide",
     specialty: "Specialist in ornithology and cultural expeditions.",
-    image: "https://placehold.co/400x400.png",
+    image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=1974&auto=format&fit=crop",
     imageHint: "kenyan man"
   },
 ];
