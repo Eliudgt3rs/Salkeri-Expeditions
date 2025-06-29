@@ -45,7 +45,7 @@ export default function DestinationDetailPage({ params }: Props) {
           <div className="absolute inset-0 bg-black/60" />
           <div className="relative z-10 text-center text-white p-4">
             <span className="text-lg font-bold uppercase text-accent tracking-widest">{destination.country}</span>
-            <h1 className="font-headline text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight">
+            <h1 className="font-headline text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-bold tracking-tight">
               {destination.title}
             </h1>
           </div>

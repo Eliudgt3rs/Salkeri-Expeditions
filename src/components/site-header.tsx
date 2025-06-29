@@ -56,65 +56,71 @@ export default function SiteHeader() {
 
   return (
     <header className={`sticky top-0 z-50 w-full transition-all duration-300 ${isScrolled ? 'bg-background/95 backdrop-blur-sm shadow-md' : 'bg-transparent'}`}>
-      <div className="container mx-auto flex h-24 items-center justify-between px-4 md:px-6">
+      <div className="container mx-auto flex h-24 items-center px-4 md:px-6">
 
-        {/* Logo */}
-        <div className="hidden md:flex">
-          <SiteLogo />
-        </div>
-
-        {/* Mobile Logo & Menu Trigger */}
-        <div className="md:hidden flex items-center gap-4">
-           <Sheet open={isMenuOpen} onOpenChange={setIsMenuOpen}>
-            <SheetTrigger asChild>
-              <Button variant="ghost" size="icon">
-                <Menu className="h-6 w-6 text-foreground" />
-                <span className="sr-only">Open Menu</span>
-              </Button>
-            </SheetTrigger>
-            <SheetContent side="left" className="bg-background w-full">
-              <nav className="flex flex-col items-center justify-center h-full gap-8">
-                <Link href="/" className="flex flex-col items-center mb-8" onClick={() => setIsMenuOpen(false)} aria-label="Home">
-                  <span className="font-headline text-3xl font-bold tracking-wider text-primary">SALKERI</span>
-                  <span className="text-xs tracking-[0.3em] text-foreground/80">EXPEDITIONS</span>
-                </Link>
-                <Link href="/" onClick={() => setIsMenuOpen(false)} className="text-2xl font-medium">Home</Link>
-                <Link href="/destinations" onClick={() => setIsMenuOpen(false)} className="text-2xl font-medium">Destinations</Link>
-                <Link href="/about" onClick={() => setIsMenuOpen(false)} className="text-2xl font-medium">About</Link>
-                <Link href="/#guides" onClick={() => setIsMenuOpen(false)} className="text-2xl font-medium">Guides</Link>
-                <Button asChild size="lg" className="mt-8 bg-accent text-white" onClick={() => setIsMenuOpen(false)}>
-                  <Link href="/#contact">Plan Your Trip</Link>
-                </Button>
-              </nav>
-            </SheetContent>
-          </Sheet>
-           <div className="md:hidden">
+        {/* Left Section */}
+        <div className="flex-1 flex justify-start">
+          <div className="hidden md:flex">
             <SiteLogo />
+          </div>
+          <div className="md:hidden">
+            <Sheet open={isMenuOpen} onOpenChange={setIsMenuOpen}>
+              <SheetTrigger asChild>
+                <Button variant="ghost" size="icon">
+                  <Menu className="h-6 w-6 text-foreground" />
+                  <span className="sr-only">Open Menu</span>
+                </Button>
+              </SheetTrigger>
+              <SheetContent side="left" className="bg-background w-3/4 max-w-sm">
+                <nav className="flex flex-col items-center justify-center h-full gap-8">
+                  <Link href="/" className="flex flex-col items-center mb-8" onClick={() => setIsMenuOpen(false)} aria-label="Home">
+                    <span className="font-headline text-3xl font-bold tracking-wider text-primary">SALKERI</span>
+                    <span className="text-xs tracking-[0.3em] text-foreground/80">EXPEDITIONS</span>
+                  </Link>
+                  <Link href="/" onClick={() => setIsMenuOpen(false)} className="text-xl font-medium">Home</Link>
+                  <Link href="/destinations" onClick={() => setIsMenuOpen(false)} className="text-xl font-medium">Destinations</Link>
+                  <Link href="/about" onClick={() => setIsMenuOpen(false)} className="text-xl font-medium">About</Link>
+                  <Link href="/#guides" onClick={() => setIsMenuOpen(false)} className="text-xl font-medium">Guides</Link>
+                  <Button asChild size="lg" className="mt-8 bg-accent text-white" onClick={() => setIsMenuOpen(false)}>
+                    <Link href="/#contact">Plan Your Trip</Link>
+                  </Button>
+                </nav>
+              </SheetContent>
+            </Sheet>
           </div>
         </div>
 
-        {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center gap-8">
-          <NavLink href="/">Home</NavLink>
-          <NavLink href="/destinations">Destinations</NavLink>
-          <NavLink href="/about">About</NavLink>
-          <NavLink href="/#guides">Guides</NavLink>
-        </nav>
+        {/* Center Section */}
+        <div className="flex-shrink-0">
+          <div className="hidden md:flex">
+            <nav className="flex items-center gap-8">
+              <NavLink href="/">Home</NavLink>
+              <NavLink href="/destinations">Destinations</NavLink>
+              <NavLink href="/about">About</NavLink>
+              <NavLink href="/#guides">Guides</NavLink>
+            </nav>
+          </div>
+          <div className="md:hidden">
+            <SiteLogo />
+          </div>
+        </div>
         
-        {/* Actions */}
-        <div className="flex items-center gap-2">
-           <Button asChild className="hidden md:inline-flex bg-accent hover:bg-accent/90 text-white">
-            <Link href="/#contact">Plan Your Trip</Link>
-          </Button>
-          <Button
-            variant="ghost"
-            size="icon"
-            onClick={toggleTheme}
-            aria-label="Toggle theme"
-          >
-            <Sun className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
-            <Moon className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
-          </Button>
+        {/* Right Section */}
+        <div className="flex-1 flex justify-end">
+          <div className="flex items-center gap-2">
+            <Button asChild className="hidden md:inline-flex bg-accent hover:bg-accent/90 text-white">
+              <Link href="/#contact">Plan Your Trip</Link>
+            </Button>
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={toggleTheme}
+              aria-label="Toggle theme"
+            >
+              <Sun className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
+              <Moon className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
+            </Button>
+          </div>
         </div>
       </div>
     </header>

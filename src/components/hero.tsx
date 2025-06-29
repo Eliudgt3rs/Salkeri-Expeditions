@@ -22,7 +22,7 @@ export default function Hero() {
       </div>
       <div className="relative z-10 text-center text-white p-4">
         <h1
-          className="font-headline text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight mb-4 animate-fade-in-up"
+          className="font-headline text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-bold tracking-tight mb-4 animate-fade-in-up"
         >
           Unforgettable Safari Experiences
         </h1>

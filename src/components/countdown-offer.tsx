@@ -53,10 +53,10 @@ const CountdownOffer = () => {
       // Server-side render or initial client render before mount
       return (
         <div className="flex justify-center gap-4 md:gap-8">
-          <div className="flex flex-col items-center"><span className="text-4xl md:text-5xl font-bold text-primary tracking-tighter">--</span><span className="text-sm uppercase text-foreground/80 tracking-widest">days</span></div>
-          <div className="flex flex-col items-center"><span className="text-4xl md:text-5xl font-bold text-primary tracking-tighter">--</span><span className="text-sm uppercase text-foreground/80 tracking-widest">hours</span></div>
-          <div className="flex flex-col items-center"><span className="text-4xl md:text-5xl font-bold text-primary tracking-tighter">--</span><span className="text-sm uppercase text-foreground/80 tracking-widest">minutes</span></div>
-          <div className="flex flex-col items-center"><span className="text-4xl md:text-5xl font-bold text-primary tracking-tighter">--</span><span className="text-sm uppercase text-foreground/80 tracking-widest">seconds</span></div>
+          <div className="flex flex-col items-center"><span className="text-3xl sm:text-4xl md:text-5xl font-bold text-primary tracking-tighter">--</span><span className="text-sm uppercase text-foreground/80 tracking-widest">days</span></div>
+          <div className="flex flex-col items-center"><span className="text-3xl sm:text-4xl md:text-5xl font-bold text-primary tracking-tighter">--</span><span className="text-sm uppercase text-foreground/80 tracking-widest">hours</span></div>
+          <div className="flex flex-col items-center"><span className="text-3xl sm:text-4xl md:text-5xl font-bold text-primary tracking-tighter">--</span><span className="text-sm uppercase text-foreground/80 tracking-widest">minutes</span></div>
+          <div className="flex flex-col items-center"><span className="text-3xl sm:text-4xl md:text-5xl font-bold text-primary tracking-tighter">--</span><span className="text-sm uppercase text-foreground/80 tracking-widest">seconds</span></div>
         </div>
       );
     }
@@ -66,7 +66,7 @@ const CountdownOffer = () => {
         <div className="flex justify-center gap-4 md:gap-8">
           {Object.entries(timeLeft).map(([interval, value]) => (
             <div key={interval} className="flex flex-col items-center">
-              <span className="text-4xl md:text-5xl font-bold text-primary tracking-tighter">
+              <span className="text-3xl sm:text-4xl md:text-5xl font-bold text-primary tracking-tighter">
                 {String(value).padStart(2, '0')}
               </span>
               <span className="text-sm uppercase text-foreground/80 tracking-widest">{interval}</span>
