@@ -1,9 +1,10 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
+import emailjs from '@emailjs/browser';
 
 import { Button } from "@/components/ui/button";
 import {
@@ -48,6 +49,7 @@ const formSchema = z.object({
 
 export default function Enquiry({ defaultDestination }: EnquiryProps) {
   const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -66,21 +68,47 @@ export default function Enquiry({ defaultDestination }: EnquiryProps) {
     }
   }, [defaultDestination, form]);
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    const encodedMessage = encodeURIComponent(
-      `New Inquiry:\n\nName: ${values.name}\nEmail: ${values.email}\nPreferred Date: ${values.preferredDates.toDateString()}\nParty Size: ${values.partySize}\nInterests: ${values.interests || 'Not specified'}\nDestination: ${values.destination}`
-    );
+  async function onSubmit(values: z.infer<typeof formSchema>) {
+    setIsSubmitting(true);
 
-    const whatsappUrl = `https://wa.me/+254719790026?text=${encodedMessage}`;
-    window.open(whatsappUrl, "_blank");
-    
-    toast({
-      title: "Inquiry Sent!",
-      description: "Redirecting you to WhatsApp to finalize your request.",
-      variant: "default",
-    });
+    const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
+    const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
+    const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
 
-    form.reset();
+    if (!serviceId || !templateId || !publicKey) {
+      toast({
+        title: "Configuration Error",
+        description: "EmailJS is not configured. Please contact support.",
+        variant: "destructive",
+      });
+      setIsSubmitting(false);
+      return;
+    }
+
+    const templateParams = {
+      from_name: values.name,
+      from_email: values.email,
+      to_name: "Salkeri Expeditions",
+      message: `Destination: ${values.destination}\nParty Size: ${values.partySize}\nPreferred Start Date: ${values.preferredDates.toDateString()}\nInterests: ${values.interests || 'Not specified'}`
+    };
+
+    try {
+      await emailjs.send(serviceId, templateId, templateParams, publicKey);
+      toast({
+        title: "Inquiry Sent!",
+        description: "Thank you for your interest. Our team will be in touch with you shortly.",
+      });
+      form.reset();
+    } catch (error) {
+      console.error('EmailJS error:', error);
+      toast({
+        title: "Error",
+        description: "Something went wrong. Please try again later.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   }
 
   return (
@@ -194,8 +222,8 @@ export default function Enquiry({ defaultDestination }: EnquiryProps) {
                   )}
                 />
 
-                <Button type="submit" size="lg" className="w-full bg-accent hover:bg-accent/90 text-white">
-                  Send Inquiry via WhatsApp
+                <Button type="submit" size="lg" className="w-full bg-accent hover:bg-accent/90 text-white" disabled={isSubmitting}>
+                  {isSubmitting ? 'Sending...' : 'Send Inquiry'}
                 </Button>
               </form>
             </Form>

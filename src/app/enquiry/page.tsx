@@ -13,8 +13,7 @@ import {
   FormMessage,
 } from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Instagram } from "lucide-react"
+import { Card, CardContent } from "@/components/ui/card"
 import { useToast } from "@/hooks/use-toast"
 import { DatePicker } from "@/components/date-picker"
 import { Textarea } from "@/components/ui/textarea"
@@ -27,6 +26,8 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select"
+import emailjs from '@emailjs/browser';
+import { useState } from 'react';
 
 
 const formSchema = z.object({
@@ -52,6 +53,7 @@ export default function Enquiry() {
   const { toast } = useToast();
   const searchParams = useSearchParams();
   const initialDestination = searchParams.get('destination') || '';
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -64,22 +66,53 @@ export default function Enquiry() {
     },
   });
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    const message = `Hello Salkeri Safaris!\n\nI'd like to inquire about a safari.\n\nName: ${values.name}\nEmail: ${values.email}\nPreferred Start Date: ${values.preferredDates.toDateString()}\nParty Size: ${values.partySize}\nDestination: ${values.destination}\nInterests: ${values.interests || 'Not specified'}`;
-    const whatsappLink = `https://wa.me/+255747098983?text=${encodeURIComponent(message)}`;
-    window.open(whatsappLink, '_blank');
+  async function onSubmit(values: z.infer<typeof formSchema>) {
+    setIsSubmitting(true);
 
-    toast({
-      title: "Inquiry Sent!",
-      description: "Thank you for your interest. Our team will be in touch with you shortly.",
-    });
-    form.reset({
-      name: "",
-      email: "",
-      partySize: 1,
-      interests: "",
-      destination: initialDestination, // Reset to initial destination or empty
-    });
+    const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
+    const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
+    const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
+
+    if (!serviceId || !templateId || !publicKey) {
+      toast({
+        title: "Configuration Error",
+        description: "EmailJS is not configured. Please contact support.",
+        variant: "destructive",
+      });
+      setIsSubmitting(false);
+      return;
+    }
+
+    const templateParams = {
+      from_name: values.name,
+      from_email: values.email,
+      to_name: "Salkeri Expeditions",
+      message: `Destination: ${values.destination}\nParty Size: ${values.partySize}\nPreferred Start Date: ${values.preferredDates.toDateString()}\nInterests: ${values.interests || 'Not specified'}`
+    };
+    
+    try {
+      await emailjs.send(serviceId, templateId, templateParams, publicKey);
+      toast({
+        title: "Inquiry Sent!",
+        description: "Thank you for your interest. Our team will be in touch with you shortly.",
+      });
+      form.reset({
+        name: "",
+        email: "",
+        partySize: 1,
+        interests: "",
+        destination: initialDestination, // Reset to initial destination or empty
+      });
+    } catch (error) {
+       console.error('EmailJS error:', error);
+      toast({
+        title: "Error",
+        description: "Something went wrong. Please try again later.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   }
 
   return (
@@ -186,7 +219,9 @@ export default function Enquiry() {
                         </FormItem>
                       )}
                     />
-                  <Button type="submit" size="lg" className="w-full bg-accent hover:bg-accent/90 text-white">Send Inquiry</Button>
+                  <Button type="submit" size="lg" className="w-full bg-accent hover:bg-accent/90 text-white" disabled={isSubmitting}>
+                    {isSubmitting ? 'Sending...' : 'Send Inquiry'}
+                  </Button>
                 </form>
               </Form>
             </CardContent>
