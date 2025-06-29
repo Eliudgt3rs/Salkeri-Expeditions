@@ -1,51 +1,38 @@
 import Link from 'next/link';
-import { MountainIcon, Instagram, Facebook, Twitter } from 'lucide-react';
+import { Instagram, Facebook, Twitter } from 'lucide-react';
 
 export default function SiteFooter() {
   return (
-    <footer className="bg-card border-t">
-      <div className="container mx-auto px-4 md:px-6 py-8">
-        <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-4">
-          <div className="flex flex-col items-start gap-4">
-             <Link href="/" className="flex items-center gap-2" prefetch={false}>
-              <MountainIcon className="h-6 w-6 text-primary" />
-              <span className="font-headline text-2xl font-bold text-primary">Simba Trails</span>
+    <footer className="bg-card border-t border-white/10">
+      <div className="container mx-auto px-4 md:px-6 py-12">
+        <div className="flex flex-col items-center text-center">
+            <Link href="/" className="flex flex-col items-center gap-1 mb-4" prefetch={false}>
+              <span className="font-headline text-4xl font-bold tracking-wider text-primary">ONGERI</span>
+              <span className="text-sm tracking-[0.3em] text-white/70">EXPEDITIONS</span>
             </Link>
-            <p className="text-sm text-muted-foreground">Your adventure of a lifetime awaits.</p>
-          </div>
-          <div>
-            <h4 className="font-headline text-lg font-semibold mb-4">Quick Links</h4>
-            <ul className="space-y-2">
-              <li><Link href="#about" className="text-sm hover:text-primary transition-colors">About Us</Link></li>
-              <li><Link href="#packages" className="text-sm hover:text-primary transition-colors">Safari Packages</Link></li>
-              <li><Link href="#contact" className="text-sm hover:text-primary transition-colors">Contact</Link></li>
-            </ul>
-          </div>
-          <div>
-            <h4 className="font-headline text-lg font-semibold mb-4">Contact</h4>
-            <ul className="space-y-2 text-sm">
-              <li><a href="tel:+254712345678" className="hover:text-primary transition-colors">+254 712 345 678</a></li>
-              <li><a href="mailto:booking@simbatrails.com" className="hover:text-primary transition-colors">booking@simbatrails.com</a></li>
-              <li>Nairobi, Kenya</li>
-            </ul>
-          </div>
-          <div>
-            <h4 className="font-headline text-lg font-semibold mb-4">Follow Us</h4>
-            <div className="flex gap-4">
+            <p className="text-sm text-muted-foreground max-w-md">
+              Specializing in bespoke, private safaris in Tanzania, we create unforgettable journeys into the heart of the wild.
+            </p>
+          <div className="flex gap-6 my-6">
               <Link href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-                <Instagram className="h-6 w-6 hover:text-primary transition-colors" />
+                <Instagram className="h-6 w-6 text-muted-foreground hover:text-primary transition-colors" />
               </Link>
               <Link href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-                <Facebook className="h-6 w-6 hover:text-primary transition-colors" />
+                <Facebook className="h-6 w-6 text-muted-foreground hover:text-primary transition-colors" />
               </Link>
               <Link href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
-                <Twitter className="h-6 w-6 hover:text-primary transition-colors" />
+                <Twitter className="h-6 w-6 text-muted-foreground hover:text-primary transition-colors" />
               </Link>
             </div>
-          </div>
+             <ul className="flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm text-muted-foreground">
+              <li><Link href="#about" className="hover:text-primary transition-colors">About Us</Link></li>
+              <li><Link href="#destinations" className="hover:text-primary transition-colors">Destinations</Link></li>
+              <li><Link href="#guides" className="hover:text-primary transition-colors">Our Guides</Link></li>
+              <li><Link href="#contact" className="hover:text-primary transition-colors">Contact</Link></li>
+            </ul>
         </div>
-        <div className="mt-8 border-t pt-8 text-center text-sm text-muted-foreground">
-          <p>&copy; {new Date().getFullYear()} Simba Trails. All Rights Reserved.</p>
+        <div className="mt-8 border-t border-white/10 pt-8 text-center text-sm text-muted-foreground">
+          <p>&copy; {new Date().getFullYear()} Ongeri Expeditions. All Rights Reserved.</p>
         </div>
       </div>
     </footer>

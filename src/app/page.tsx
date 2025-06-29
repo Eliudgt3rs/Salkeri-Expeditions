@@ -7,6 +7,7 @@ import Testimonials from '@/components/testimonials';
 import WhyChooseUs from '@/components/why-choose-us';
 import Enquiry from '@/components/enquiry';
 import SiteFooter from '@/components/site-footer';
+import FeaturedIn from '@/components/featured-in';
 
 export default function Home() {
   return (
@@ -14,11 +15,12 @@ export default function Home() {
       <SiteHeader />
       <main className="flex-1">
         <Hero />
+        <FeaturedIn />
         <About />
         <SafariPackages />
-        <Team />
-        <Testimonials />
         <WhyChooseUs />
+        <Testimonials />
+        <Team />
         <Enquiry />
       </main>
       <SiteFooter />

@@ -5,21 +5,21 @@ const teamMembers = [
   {
     name: "Jomo Kenyatta",
     role: "Founder & Lead Guide",
-    specialty: "Luxury & Photographic Safaris",
+    specialty: "Expert in wildlife tracking and photographic safaris.",
     image: "https://placehold.co/400x400.png",
     hint: "safari guide"
   },
   {
     name: "Amina Abdalla",
-    role: "Honeymoon & Romance Specialist",
-    specialty: "East Africa Honeymoons",
+    role: "Safari Operations Manager",
+    specialty: "Ensures every detail of your journey is seamless and perfect.",
     image: "https://placehold.co/400x400.png",
     hint: "woman travel planner"
   },
   {
     name: "David Kimani",
-    role: "Family Adventure Planner",
-    specialty: "Multi-generational & Kids Safaris",
+    role: "Senior Safari Guide",
+    specialty: "Specialist in ornithology and cultural expeditions.",
     image: "https://placehold.co/400x400.png",
     hint: "man smiling"
   },
@@ -30,14 +30,14 @@ export default function Team() {
     <section id="team" className="w-full py-16 md:py-24 lg:py-32 bg-card">
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
-          <h2 className="font-headline text-4xl md:text-5xl font-bold tracking-tighter text-primary">Meet Our Expert Team</h2>
+          <h2 className="font-headline text-4xl md:text-5xl font-bold tracking-tighter text-primary">Meet Our Expert Guides</h2>
           <p className="max-w-[900px] text-lg text-foreground/80">
-            The heart of Simba Trails, our team combines local passion with unparalleled expertise.
+            Our team is the heart of your safari. Passionate, knowledgeable, and deeply connected to Tanzania.
           </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {teamMembers.map((member, index) => (
-            <Card key={index} className="text-center overflow-hidden transition-transform transform hover:-translate-y-2 hover:shadow-2xl">
+            <Card key={index} className="text-center overflow-hidden border-transparent hover:shadow-2xl hover:border-primary transition-all duration-300">
               <CardHeader className="p-0">
                  <Image
                     src={member.image}

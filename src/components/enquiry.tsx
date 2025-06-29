@@ -17,6 +17,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Instagram } from "lucide-react"
 import { useToast } from "@/hooks/use-toast"
 import { DatePicker } from "./date-picker"
+import { Textarea } from "./ui/textarea"
 
 const formSchema = z.object({
   name: z.string().min(2, {
@@ -31,6 +32,7 @@ const formSchema = z.object({
   partySize: z.coerce.number().min(1, {
     message: "Party size must be at least 1.",
   }),
+  interests: z.string().optional(),
 });
 
 export default function Enquiry() {
@@ -42,77 +44,61 @@ export default function Enquiry() {
       name: "",
       email: "",
       partySize: 1,
+      interests: "",
     },
   });
 
   function onSubmit(values: z.infer<typeof formSchema>) {
     console.log(values);
     toast({
-      title: "Enquiry Sent!",
-      description: "Thank you for your interest. We will get back to you shortly.",
+      title: "Inquiry Sent!",
+      description: "Thank you for your interest. Our team will be in touch with you shortly.",
     });
     form.reset();
   }
 
   return (
-    <section id="contact" className="w-full py-16 md:py-24 lg:py-32">
+    <section id="contact" className="w-full py-16 md:py-24 lg:py-32 bg-card">
       <div className="container mx-auto px-4 md:px-6">
-        <div className="grid gap-12 md:grid-cols-2">
-          <div className="space-y-6">
-            <h2 className="font-headline text-4xl md:text-5xl font-bold tracking-tighter text-primary">Start Your Adventure</h2>
-            <p className="text-lg text-foreground/80">
-              Have questions or ready to book? Fill out the form, and one of our safari specialists will be in touch. For immediate assistance, feel free to call us.
+        <div className="max-w-4xl mx-auto text-center mb-12">
+           <h2 className="font-headline text-4xl md:text-5xl font-bold tracking-tighter text-primary">Let's Plan Your Trip</h2>
+            <p className="text-lg text-foreground/80 mt-4">
+              Fill in the form below to get started on your custom-tailored safari adventure. One of our safari specialists will get back to you within 24 hours.
             </p>
-            <div className="space-y-4">
-              <div className="flex items-center gap-4">
-                 <p className="text-lg"><strong>Phone:</strong> <a href="tel:+254712345678" className="hover:text-primary transition-colors">+254 712 345 678</a></p>
-              </div>
-              <div className="flex items-center gap-4">
-                <p className="text-lg"><strong>Email:</strong> <a href="mailto:booking@simbatrails.com" className="hover:text-primary transition-colors">booking@simbatrails.com</a></p>
-              </div>
-              <div className="flex items-center gap-4">
-                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-primary transition-colors">
-                  <Instagram className="h-6 w-6" />
-                  <span className="font-medium">Follow us on Instagram</span>
-                </a>
-              </div>
-            </div>
-          </div>
-          <Card>
-            <CardHeader>
-              <CardTitle className="font-headline text-2xl">Enquiry Form</CardTitle>
-              <CardDescription>Let's plan your dream safari.</CardDescription>
-            </CardHeader>
-            <CardContent>
+        </div>
+        <Card className="max-w-4xl mx-auto border-primary">
+            <CardContent className="p-8">
               <Form {...form}>
                 <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-                  <FormField
-                    control={form.control}
-                    name="name"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel>Full Name</FormLabel>
-                        <FormControl>
-                          <Input placeholder="Jane Doe" {...field} />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-                  <FormField
-                    control={form.control}
-                    name="email"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel>Email Address</FormLabel>
-                        <FormControl>
-                          <Input placeholder="jane.doe@example.com" {...field} />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <FormField
+                      control={form.control}
+                      name="name"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel>Full Name</FormLabel>
+                          <FormControl>
+                            <Input placeholder="Jane Doe" {...field} />
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+                    <FormField
+                      control={form.control}
+                      name="email"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel>Email Address</FormLabel>
+                          <FormControl>
+                            <Input placeholder="jane.doe@example.com" {...field} />
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+                  </div>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <FormField
                       control={form.control}
                       name="preferredDates"
@@ -138,12 +124,24 @@ export default function Enquiry() {
                       )}
                     />
                   </div>
-                  <Button type="submit" className="w-full bg-accent hover:bg-accent/90 text-accent-foreground">Submit Enquiry</Button>
+                   <FormField
+                      control={form.control}
+                      name="interests"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel>Interests &amp; ideas</FormLabel>
+                          <FormControl>
+                            <Textarea placeholder="Tell us about your dream safari (e.g., wildlife photography, family vacation, specific animals)..." {...field} />
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+                  <Button type="submit" size="lg" className="w-full bg-primary hover:bg-primary/90 text-primary-foreground">Send Inquiry</Button>
                 </form>
               </Form>
             </CardContent>
           </Card>
-        </div>
       </div>
     </section>
   );
