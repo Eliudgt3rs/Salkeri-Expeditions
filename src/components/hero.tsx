@@ -1,14 +1,22 @@
+
 import { Button } from '@/components/ui/button';
 import { ArrowDown, Mouse } from 'lucide-react';
 import Link from 'next/link';
 
 export default function Hero() {
   return (
-    <section id="home" className="relative h-screen min-h-[700px] w-full flex items-center justify-center">
-      <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat z-0"
-        style={{ backgroundImage: "url('https://source.unsplash.com/1920x1080/?tanzania,safari')" }}
-      >
+    <section id="home" className="relative h-screen min-h-[700px] w-full flex items-center justify-center overflow-hidden">
+      <div className="absolute inset-0 z-0">
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="w-full h-full object-cover"
+        >
+          <source src="https://videos.pexels.com/video-files/2832328/2832328-hd_1920_1080_25fps.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
         <div className="absolute inset-0 bg-black/60" />
       </div>
       <div className="relative z-10 text-center text-white p-4">
