@@ -38,9 +38,13 @@ export default function SafariPackages() {
                     <h3 className="font-headline text-2xl mt-1 mb-2 text-foreground">{dest.title}</h3>
                     <p className="text-muted-foreground">{dest.description}</p>
                   </CardContent>
-                  <CardFooter className="p-6 pt-0">
+                  <CardFooter className="p-6 pt-0 flex justify-between items-center">
+                    <div>
+                        <p className="text-sm text-muted-foreground">From</p>
+                        <p className="text-xl font-bold text-primary">${dest.price.toLocaleString()}</p>
+                    </div>
                     <Link href={`/destinations/${dest.slug}`} className="text-primary font-bold inline-flex items-center gap-2 group-hover:gap-3 transition-[gap]">
- Read More <ArrowRight className="h-4 w-4" />
+                      Read More <ArrowRight className="h-4 w-4" />
                     </Link>
                   </CardFooter>
                 </Card>

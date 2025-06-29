@@ -9,6 +9,7 @@ export type Destination = {
   additionalImages: string[];
   imageHint: string;
   isPrime?: boolean;
+  price: number;
 };
 
 export const destinations: Destination[] = [
@@ -19,14 +20,15 @@ export const destinations: Destination[] = [
     description: 'Home to the Great Migration, an endless expanse of iconic African savanna.',
     longDescription: 'The Serengeti is the Africa of your dreams. Famous for the annual Great Migration, where millions of wildebeest and zebra thunder across the plains in search of fresh grazing. Its vast, sun-kissed landscapes are dotted with acacia trees and roaming herds of lion, leopard, elephant, and buffalo. It is the ultimate safari destination, offering unparalleled wildlife viewing year-round.',
     imageHint: 'serengeti zebras',
-    image: '/Serengeti.jpg',
+    image: 'https://placehold.co/600x400.png',
     additionalImages: [
-      '/Serengeti.jpg',
-      '/Serengeti.jpg',
-      '/Serengeti.jpg',
-      '/Serengeti.jpg',
+      'https://placehold.co/600x400.png',
+      'https://placehold.co/600x400.png',
+      'https://placehold.co/600x400.png',
+      'https://placehold.co/600x400.png',
     ],
     isPrime: true,
+    price: 4000,
   },
   {
     slug: 'maasai-mara-national-reserve',
@@ -34,15 +36,16 @@ export const destinations: Destination[] = [
     country: 'Kenya',
     description: 'Kenya\'s crown jewel, offering breathtaking landscapes and abundant wildlife.',
     longDescription: 'Adjoining the Serengeti, the Maasai Mara is world-renowned for its exceptional population of big cats and as the northern stage for the Great Migration. The dramatic river crossings of the Mara River are a spectacle of nature. Beyond the migration, its rolling grasslands and acacia-studded plains are teeming with life, offering a classic safari experience.',
-    image: '/Masaaimara.jpg',
+    image: 'https://placehold.co/600x400.png',
     imageHint: 'maasai mara wildebeest crossing',
     additionalImages: [
-      '/Masaaimara.jpg',
-      '/Masaaimara.jpg',
-      '/Masaaimara.jpg',
-      '/Masaaimara.jpg',
+      'https://placehold.co/600x400.png',
+      'https://placehold.co/600x400.png',
+      'https://placehold.co/600x400.png',
+      'https://placehold.co/600x400.png',
     ],
     isPrime: true,
+    price: 3800,
   },
   {
     slug: 'ngorongoro-crater',
@@ -50,15 +53,16 @@ export const destinations: Destination[] = [
     country: 'Tanzania',
     description: 'A self-contained world of wildlife within a massive volcanic caldera.',
     longDescription: 'The Ngorongoro Crater is a geological marvel and a UNESCO World Heritage Site. This giant collapsed volcano forms a natural enclosure that hosts one of the densest concentrations of wildlife in Africa. It is one of the best places to see the Big Five, including the rare black rhino, all within a single day\'s game drive on the crater floor.',
-    image: '/Ngorongorocrater.webp',
+    image: 'https://placehold.co/600x400.png',
     imageHint: 'ngorongoro wildlife',
     additionalImages: [
-      '/Ngorongorocrater.webp',
-      '/Ngorongorocrater.webp',
-      '/Ngorongorocrater.webp',
-      '/Ngorongorocrater.webp',
+      'https://placehold.co/600x400.png',
+      'https://placehold.co/600x400.png',
+      'https://placehold.co/600x400.png',
+      'https://placehold.co/600x400.png',
     ],
     isPrime: true,
+    price: 3500,
   },
   {
     slug: 'amboseli-national-park',
@@ -66,15 +70,16 @@ export const destinations: Destination[] = [
     country: 'Kenya',
     description: 'Famous for its large elephant herds against the backdrop of Mount Kilimanjaro.',
     longDescription: 'Amboseli offers one of the most iconic images of Africa: vast herds of elephants with the snow-capped peak of Mount Kilimanjaro rising from the plains. The park\'s dry, dusty plains are fed by underground springs, creating lush wetlands that attract a rich diversity of wildlife, including lions, cheetahs, and a plethora of bird species.',
-    image: '/AmboseliNationalPark.jpg',
+    image: 'https://placehold.co/600x400.png',
     imageHint: 'amboseli elephants',
     additionalImages: [
-      '/AmboseliNationalPark.jpg',
-      '/AmboseliNationalPark.jpg',
-      '/AmboseliNationalPark.jpg',
-      '/AmboseliNationalPark.jpg',
+      'https://placehold.co/600x400.png',
+      'https://placehold.co/600x400.png',
+      'https://placehold.co/600x400.png',
+      'https://placehold.co/600x400.png',
     ],
     isPrime: true,
+    price: 3200,
   },
   {
     slug: 'zanzibar-archipelago',
@@ -82,15 +87,16 @@ export const destinations: Destination[] = [
     country: 'Tanzania',
     description: 'Pristine beaches, spice-scented history, and turquoise waters.',
     longDescription: 'The perfect post-safari retreat, Zanzibar is an archipelago of idyllic islands. Explore the narrow, winding streets of historic Stone Town, a UNESCO World Heritage site, relax on palm-fringed white sand beaches, and dive or snorkel in the crystal-clear waters of the Indian Ocean, rich with coral reefs and marine life.',
-    image: '/ZanzibarArchipelago.jpg',
+    image: 'https://placehold.co/600x400.png',
     imageHint: 'zanzibar beach',
     additionalImages: [
-      '/ZanzibarArchipelago.jpg',
-      '/ZanzibarArchipelago.jpg',
-      '/ZanzibarArchipelago.jpg',
-      '/ZanzibarArchipelago.jpg',
+      'https://placehold.co/600x400.png',
+      'https://placehold.co/600x400.png',
+      'https://placehold.co/600x400.png',
+      'https://placehold.co/600x400.png',
     ],
     isPrime: true,
+    price: 2500,
   },
   {
     slug: 'tarangire-national-park',
@@ -98,7 +104,7 @@ export const destinations: Destination[] = [
     country: 'Tanzania',
     description: 'A landscape of baobab trees and home to massive elephant herds in the dry season.',
     longDescription: 'Tarangire is a land of giants, characterized by its ancient baobab trees and large elephant populations. During the dry season, the Tarangire River becomes a vital lifeline, attracting an incredible concentration of wildlife. It\'s a superb park for birdwatching and offers a more secluded safari experience.',
-    image: '/TarangireNationalPark.jpg',
+    image: 'https://placehold.co/600x400.png',
     imageHint: 'tarangire baobab',
     additionalImages: [
       'https://placehold.co/600x400.png',
@@ -106,6 +112,7 @@ export const destinations: Destination[] = [
       'https://placehold.co/600x400.png',
       'https://placehold.co/600x400.png',
     ],
+    price: 2800,
   },
   {
     slug: 'lake-nakuru-national-park',
@@ -113,7 +120,7 @@ export const destinations: Destination[] = [
     country: 'Kenya',
     description: 'A soda lake famous for its vast flocks of flamingos and rhino sanctuary.',
     longDescription: 'Lake Nakuru is a vibrant sea of pink, thanks to the thousands of flamingos that feed on the algae in its alkaline waters. The park is a dedicated rhino sanctuary, making it one of the best places in Kenya to see both black and white rhinos. The surrounding acacia woodland is also home to leopards, lions, and giraffes.',
-    image: '/LakeNakuruNationalPark.jpg',
+    image: 'https://placehold.co/600x400.png',
     imageHint: 'lake nakuru flamingos',
     additionalImages: [
       'https://placehold.co/600x400.png',
@@ -121,6 +128,7 @@ export const destinations: Destination[] = [
       'https://placehold.co/600x400.png',
       'https://placehold.co/600x400.png',
     ],
+    price: 2700,
   },
   {
     slug: 'ruaha-national-park',
@@ -128,7 +136,7 @@ export const destinations: Destination[] = [
     country: 'Tanzania',
     description: 'Tanzania\'s largest park, a remote and rugged wilderness with a wild, untouched feel.',
     longDescription: 'For those seeking a true off-the-beaten-path adventure, Ruaha is the perfect destination. Its dramatic landscapes are home to a huge diversity of wildlife, including 10% of the world\'s lion population and one of East Africa\'s largest elephant herds. The park\'s remoteness ensures an exclusive and authentic safari experience.',
-    image: '/RuahaNationalPark.jpg',
+    image: 'https://placehold.co/600x400.png',
     imageHint: 'ruaha river',
     additionalImages: [
       'https://placehold.co/600x400.png',
@@ -136,6 +144,7 @@ export const destinations: Destination[] = [
       'https://placehold.co/600x400.png',
       'https://placehold.co/600x400.png',
     ],
+    price: 4500,
   },
   {
     slug: 'samburu-national-reserve',
@@ -143,7 +152,7 @@ export const destinations: Destination[] = [
     country: 'Kenya',
     description: 'An arid, rugged landscape home to unique wildlife known as the Samburu Special Five.',
     longDescription: 'Samburu offers a starkly beautiful, semi-arid landscape. It is here you can find the "Samburu Special Five": the Grevy\'s zebra, the reticulated giraffe, the Somali ostrich, the gerenuk, and the Beisa oryx. The Ewaso Ng\'iro river is a vital water source that attracts a plethora of other wildlife, including elephants and big cats.',
-    image: '/SamburuNationalReserve.jpg',
+    image: 'https://placehold.co/600x400.png',
     imageHint: 'samburu giraffe',
     additionalImages: [
       'https://placehold.co/600x400.png',
@@ -151,6 +160,7 @@ export const destinations: Destination[] = [
       'https://placehold.co/600x400.png',
       'https://placehold.co/600x400.png',
     ],
+    price: 3300,
   },
   {
     slug: 'selous-game-reserve',
@@ -158,7 +168,7 @@ export const destinations: Destination[] = [
     country: 'Tanzania',
     description: 'One of the world\'s largest fauna reserves, offering boat safaris and walking tours.',
     longDescription: 'Formerly Selous Game Reserve, Nyerere National Park is a vast and wild area where the Rufiji River creates a network of lakes and channels. This allows for unique safari experiences, including boat safaris and guided walking tours, offering a different perspective on the African bush. It is home to large populations of wild dogs, hippos, and crocodiles.',
-    image: '/NyerereNationalPark.jpg',
+    image: 'https://placehold.co/600x400.png',
     imageHint: 'tanzania wildlife',
     additionalImages: [
       'https://placehold.co/600x400.png',
@@ -166,6 +176,7 @@ export const destinations: Destination[] = [
       'https://placehold.co/600x400.png',
       'https://placehold.co/600x400.png',
     ],
+    price: 4200,
   },
   {
     slug: 'tsavo-national-park',
@@ -173,7 +184,7 @@ export const destinations: Destination[] = [
     country: 'Kenya',
     description: 'A vast wilderness of rocky landscapes, volcanic hills, and the legendary "red elephants".',
     longDescription: 'Comprising Tsavo East and Tsavo West, this is one of the largest parks in the world. It is known for its "red elephants" which dust themselves with the volcanic red soil, the man-eating lions of Tsavo legend, and the stunning Mzima Springs, where you can see hippos and crocodiles through an underwater viewing chamber.',
-    image: '/TsavoNationalPark.jpg',
+    image: 'https://placehold.co/600x400.png',
     imageHint: 'kenya elephants',
     additionalImages: [
       'https://placehold.co/600x400.png',
@@ -181,6 +192,7 @@ export const destinations: Destination[] = [
       'https://placehold.co/600x400.png',
       'https://placehold.co/600x400.png',
     ],
+    price: 2900,
   },
   {
     slug: 'mahale-mountains-national-park',
@@ -188,7 +200,7 @@ export const destinations: Destination[] = [
     country: 'Tanzania',
     description: 'Remote and beautiful, offering the best chimpanzee trekking in Africa.',
     longDescription: 'Set on the shores of the crystal-clear Lake Tanganyika, the Mahale Mountains are a remote paradise. The park\'s main attraction is the chance to track and observe a large population of habituated chimpanzees in their natural habitat. It\'s a magical experience combining forest trekking with lakeside relaxation.',
-    image: '/Mahale-mountains-national-park.jpg',
+    image: 'https://placehold.co/600x400.png',
     imageHint: 'chimpanzee tanzania',
     additionalImages: [
       'https://placehold.co/600x400.png',
@@ -196,6 +208,7 @@ export const destinations: Destination[] = [
       'https://placehold.co/600x400.png',
       'https://placehold.co/600x400.png',
     ],
+    price: 6000,
   },
   {
     slug: 'lake-manyara-national-park',
@@ -203,7 +216,7 @@ export const destinations: Destination[] = [
     country: 'Tanzania',
     description: 'Known for its tree-climbing lions, flamingo-lined lake, and diverse habitats.',
     longDescription: 'Nestled at the base of the Great Rift Valley escarpment, Lake Manyara offers a microcosm of the Tanzanian safari experience. Its diverse habitats include groundwater forest, acacia woodland, and the soda lake itself. It is famous for its elusive tree-climbing lions and large troops of baboons.',
-    image: '/LakeManyaraNationalPark.jpg',
+    image: 'https://placehold.co/600x400.png',
     imageHint: 'tanzania lions',
     additionalImages: [
       'https://placehold.co/600x400.png',
@@ -211,6 +224,7 @@ export const destinations: Destination[] = [
       'https://placehold.co/600x400.png',
       'https://placehold.co/600x400.png',
     ],
+    price: 2600,
   },
   {
     slug: 'laikipia-plateau',
@@ -218,7 +232,7 @@ export const destinations: Destination[] = [
     country: 'Kenya',
     description: 'A collection of private and community conservancies at the forefront of conservation.',
     longDescription: 'Laikipia is a stunning success story of conservation, a patchwork of community and private wildlife reserves. It is a vital sanctuary for endangered species, including Grevy\'s zebra and black rhino. Laikipia offers a wide range of activities not typically found in national parks, such as night drives, horse riding, and camel treks.',
-    image: '/LaikipiaPlateau.jpg',
+    image: 'https://placehold.co/600x400.png',
     imageHint: 'kenya rhino',
     additionalImages: [
       'https://placehold.co/600x400.png',
@@ -226,6 +240,7 @@ export const destinations: Destination[] = [
       'https://placehold.co/600x400.png',
       'https://placehold.co/600x400.png',
     ],
+    price: 5000,
   },
   {
     slug: 'gombe-stream-national-park',
@@ -233,7 +248,7 @@ export const destinations: Destination[] = [
     country: 'Tanzania',
     description: 'The site of Jane Goodall\'s pioneering chimpanzee research.',
     longDescription: 'Gombe is the smallest of Tanzania\'s national parks and the place where Jane Goodall began her groundbreaking research on chimpanzee behavior. Trekking through the steep forested slopes to find the chimps is an intimate and rewarding experience, offering a glimpse into the world she first revealed.',
-    image: '/GombeStreamNationalPark.jpg',
+    image: 'https://placehold.co/600x400.png',
     imageHint: 'gombe chimpanzee',
     additionalImages: [
       'https://placehold.co/600x400.png',
@@ -241,6 +256,7 @@ export const destinations: Destination[] = [
       'https://placehold.co/600x400.png',
       'https://placehold.co/600x400.png',
     ],
+    price: 5500,
   },
   {
     slug: 'diani-beach',
@@ -248,7 +264,7 @@ export const destinations: Destination[] = [
     country: 'Kenya',
     description: 'Kenya\'s most stunning beach, with brilliant white sand and lush greenery.',
     longDescription: 'After an adventurous safari, Diani Beach is the perfect place to unwind. Its long stretch of powdery white sand is lapped by the warm Indian Ocean and fringed with palm trees. It offers a range of watersports, beautiful coral reefs for snorkeling, and a relaxed, welcoming atmosphere.',
-    image: '/DianiBeach.jpg',
+    image: 'https://placehold.co/600x400.png',
     imageHint: 'diani beach',
     additionalImages: [
       'https://placehold.co/600x400.png',
@@ -256,6 +272,7 @@ export const destinations: Destination[] = [
       'https://placehold.co/600x400.png',
       'https://placehold.co/600x400.png',
     ],
+    price: 2200,
   },
   {
     slug: 'mount-kilimanjaro',
@@ -263,7 +280,7 @@ export const destinations: Destination[] = [
     country: 'Tanzania',
     description: 'Climb the highest freestanding mountain in the world, the legendary Mt. Kilimanjaro.',
     longDescription: 'Rising dramatically from the surrounding plains, Mount Kilimanjaro is Africa\'s highest peak. Climbing Kilimanjaro is a challenging but rewarding journey that takes you through five distinct climate zones, from rainforest to alpine desert and finally to the glacial summit. Reaching the "Roof of Africa" is an achievement of a lifetime.',
-    image: '/MountKilimanjaro.jpg',
+    image: 'https://placehold.co/600x400.png',
     imageHint: 'mount kilimanjaro',
     additionalImages: [
       'https://placehold.co/600x400.png',
@@ -271,6 +288,7 @@ export const destinations: Destination[] = [
       'https://placehold.co/600x400.png',
       'https://placehold.co/600x400.png',
     ],
+    price: 2500,
   },
   {
     slug: 'katavi-national-park',
@@ -278,7 +296,7 @@ export const destinations: Destination[] = [
     country: 'Tanzania',
     description: 'A remote, wild, and untouched park offering a glimpse of Africa as it once was.',
     longDescription: 'Katavi is for the safari purist. In the dry season, the Katuma River shrinks to a trickle, forcing thousands of hippos and crocodiles into small pools. The sheer density of wildlife is breathtaking. With very few visitors, a safari in Katavi feels like a true exploration of a forgotten land.',
-    image: '/KataviNationalPark.jpg',
+    image: 'https://placehold.co/600x400.png',
     imageHint: 'tanzania hippos',
     additionalImages: [
       'https://placehold.co/600x400.png',
@@ -286,6 +304,7 @@ export const destinations: Destination[] = [
       'https://placehold.co/600x400.png',
       'https://placehold.co/600x400.png',
     ],
+    price: 5800,
   },
   {
     slug: 'mount-kenya-national-park',
@@ -293,7 +312,7 @@ export const destinations: Destination[] = [
     country: 'Kenya',
     description: 'Africa\'s second-highest peak, offering a rugged landscape of peaks and glaciers.',
     longDescription: 'Mount Kenya is a stunning UNESCO World Heritage Site with a diverse range of ecosystems. While reaching the highest peaks is a technical climb, the surrounding park offers fantastic trekking opportunities through montane forests, bamboo zones, and moorlands, with the chance to see elephants, buffalo, and the rare bongo antelope.',
-    image: '/MountKenyaNationalPark.jpg',
+    image: 'https://placehold.co/600x400.png',
     imageHint: 'mount kenya',
     additionalImages: [
       'https://placehold.co/600x400.png',
@@ -301,5 +320,6 @@ export const destinations: Destination[] = [
       'https://placehold.co/600x400.png',
       'https://placehold.co/600x400.png',
     ],
+    price: 2000,
   },
 ];

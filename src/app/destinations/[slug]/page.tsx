@@ -61,9 +61,15 @@ export default function DestinationDetailPage({ params }: Props) {
                 <p>{destination.longDescription}</p>
               </div>
 
-              <div className="mt-12 text-center flex flex-col sm:flex-row items-center justify-center gap-4">
+              <div className="mt-12 text-center">
+                  <p className="text-sm uppercase tracking-wider text-muted-foreground">Starting from</p>
+                  <p className="font-headline text-5xl font-bold text-primary">${destination.price.toLocaleString()}</p>
+                  <p className="text-muted-foreground">per person</p>
+              </div>
+
+              <div className="mt-8 text-center flex flex-col sm:flex-row items-center justify-center gap-4">
                 <Button size="lg" className="bg-accent hover:bg-accent/90 text-white" asChild>
-                  <Link href="/#contact">
+                  <Link href="#contact">
                     Fill Enquiry Form
                   </Link>
                 </Button>
