@@ -10,7 +10,7 @@
     --card-foreground: 0 0% 10%;
     --popover: 0 0% 100%;
     --popover-foreground: 0 0% 10%;
-    --primary: 60 30% 50%; /* A lighter shade of olive */
+    --primary: 30 45% 40%; /* Earthy brown */
     --primary-foreground: 0 0% 98%; /* White for contrast */
     --secondary: 0 0% 90%;
     --secondary-foreground: 0 0% 10%;
@@ -20,9 +20,9 @@
     --destructive-foreground: 0 0% 98%;
     --border: 0 0% 80%;
     --input: 0 0% 90%;
-    --ring: 60 30% 50%;
+    --ring: 30 45% 40%; /* Earthy brown */
     --radius: 0.5rem;
-    --chart-1: 60 30% 50%; /* Match primary */
+    --chart-1: 30 45% 40%; /* Match primary */
     --chart-2: 30 70% 40%; /* Adjusted accent */
     --chart-3: 10 60% 50%;
     --chart-4: 0 0% 80%;
@@ -38,7 +38,7 @@
     --card-foreground: 0 0% 98%;
     --popover: 0 0% 10%;
     --popover-foreground: 0 0% 98%;
-    --primary: 60 30% 50%; /* Keep primary consistent */
+    --primary: 30 45% 50%; /* Lighter earthy brown for dark mode */
     --primary-foreground: 0 0% 98%;
     --secondary: 0 0% 20%;
     --secondary-foreground: 0 0% 98%;
@@ -48,8 +48,8 @@
     --destructive-foreground: 0 0% 98%;
     --border: 0 0% 25%;
     --input: 0 0% 15%;
-    --ring: 60 30% 50%;
-    --chart-1: 60 30% 50%;
+    --ring: 30 45% 50%; /* Lighter earthy brown for dark mode */
+    --chart-1: 30 45% 50%;
     --chart-2: 30 70% 60%; /* Adjust accent for dark mode */
     --chart-3: 10 60% 60%;
     --chart-4: 0 0% 40%;
