@@ -7,7 +7,7 @@ export default function SiteFooter() {
       <div className="container mx-auto px-4 md:px-6 py-12">
         <div className="flex flex-col items-center text-center">
             <Link href="/" className="flex flex-col items-center gap-1 mb-4" prefetch={false}>
-              <span className="font-headline text-4xl font-bold tracking-wider text-primary">ONGERI</span>
+              <span className="font-headline text-4xl font-bold tracking-wider text-primary">SALKERI</span>
               <span className="text-sm tracking-[0.3em] text-white/70">EXPEDITIONS</span>
             </Link>
             <p className="text-sm text-muted-foreground max-w-md">
@@ -32,7 +32,7 @@ export default function SiteFooter() {
             </ul>
         </div>
         <div className="mt-8 border-t border-white/10 pt-8 text-center text-sm text-muted-foreground">
-          <p>&copy; {new Date().getFullYear()} Ongeri Expeditions. All Rights Reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Salkeri Expeditions. All Rights Reserved.</p>
         </div>
       </div>
     </footer>

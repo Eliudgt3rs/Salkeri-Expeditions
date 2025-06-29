@@ -42,7 +42,7 @@ export default function SiteHeader() {
 
         <div className="hidden md:block absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
           <Link href="/" className="flex flex-col items-center" prefetch={false}>
-            <span className="font-headline text-3xl font-bold tracking-wider text-foreground">ONGERI</span>
+            <span className="font-headline text-3xl font-bold tracking-wider text-foreground">SALKERI</span>
             <span className="text-xs tracking-[0.3em] text-foreground/80">EXPEDITIONS</span>
           </Link>
         </div>
@@ -59,7 +59,7 @@ export default function SiteHeader() {
         {/* Mobile Navigation */}
         <div className="md:hidden">
            <Link href="/" className="flex flex-col items-center" prefetch={false}>
-            <span className="font-headline text-2xl font-bold tracking-wider text-foreground">ONGERI</span>
+            <span className="font-headline text-2xl font-bold tracking-wider text-foreground">SALKERI</span>
             <span className="text-[0.6rem] tracking-[0.2em] text-foreground/80">EXPEDITIONS</span>
           </Link>
         </div>
@@ -75,7 +75,7 @@ export default function SiteHeader() {
             <SheetContent side="right" className="bg-background w-full">
               <nav className="flex flex-col items-center justify-center h-full gap-8">
                 <Link href="/" className="flex flex-col items-center mb-8" prefetch={false} onClick={() => setIsMenuOpen(false)}>
-                  <span className="font-headline text-3xl font-bold tracking-wider text-primary">ONGERI</span>
+                  <span className="font-headline text-3xl font-bold tracking-wider text-primary">SALKERI</span>
                   <span className="text-xs tracking-[0.3em] text-foreground/80">EXPEDITIONS</span>
                 </Link>
                 <Link href="#home" onClick={() => setIsMenuOpen(false)} className="text-2xl font-medium">Home</Link>

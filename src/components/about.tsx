@@ -9,7 +9,7 @@ export default function About() {
         <div className="grid gap-10 md:grid-cols-2 md:gap-20 items-center">
           <div className="space-y-6">
             <h2 className="font-headline text-4xl md:text-5xl font-bold tracking-tight text-primary">
-              Welcome to Ongeri Expeditions
+              Welcome to Salkeri Expeditions
             </h2>
             <p className="text-lg text-foreground/80">
               We are a boutique, family-owned tour operator specializing in private, tailor-made safaris in Tanzania. Our deep-rooted connection to this land and its wildlife allows us to craft truly authentic and unforgettable experiences.

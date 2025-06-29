@@ -33,7 +33,7 @@ export default function WhyChooseUs() {
     <section id="why-us" className="w-full py-16 md:py-24 lg:py-32 bg-card">
        <div className="container mx-auto px-4 md:px-6">
         <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
-          <h2 className="font-headline text-4xl md:text-5xl font-bold tracking-tighter text-primary">Why Choose Ongeri Expeditions</h2>
+          <h2 className="font-headline text-4xl md:text-5xl font-bold tracking-tighter text-primary">Why Choose Salkeri Expeditions</h2>
           <p className="max-w-[900px] text-lg text-foreground/80">
             We go beyond the ordinary to deliver extraordinary safari experiences.
           </p>

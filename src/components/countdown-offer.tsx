@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { Button } from './ui/button';
 import Link from 'next/link';
 
@@ -14,12 +14,20 @@ type TimeLeft = {
 const CountdownOffer = () => {
   const [timeLeft, setTimeLeft] = useState<TimeLeft | null>(null);
   const [isMounted, setIsMounted] = useState(false);
+  const targetDateRef = useRef<Date | null>(null);
 
   useEffect(() => {
     setIsMounted(true);
+
+    if (!targetDateRef.current) {
+      const target = new Date();
+      target.setHours(target.getHours() + 34);
+      targetDateRef.current = target;
+    }
     
     const calculateTimeLeft = (): TimeLeft | null => {
-      const difference = +new Date('2024-12-31T23:59:59') - +new Date();
+      if (!targetDateRef.current) return null;
+      const difference = +targetDateRef.current - +new Date();
       if (difference > 0) {
         return {
           days: Math.floor(difference / (1000 * 60 * 60 * 24)),

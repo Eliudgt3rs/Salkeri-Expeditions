@@ -3,7 +3,7 @@ import {Toaster} from "@/components/ui/toaster";
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'Ongeri Expeditions | Unforgettable Safari Experiences',
+  title: 'Salkeri Expeditions | Unforgettable Safari Experiences',
   description: 'Boutique tour operator specializing in private, tailor-made safaris in Tanzania.',
 };
 

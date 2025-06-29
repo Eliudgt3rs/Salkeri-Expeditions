@@ -5,7 +5,7 @@ import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious
 const testimonials = [
   {
     name: "The Miller Family",
-    quote: "Ongeri Expeditions gave us the family trip of a lifetime. The attention to detail was incredible, and our guide's knowledge of the wildlife was simply astounding. Unforgettable!",
+    quote: "Salkeri Expeditions gave us the family trip of a lifetime. The attention to detail was incredible, and our guide's knowledge of the wildlife was simply astounding. Unforgettable!",
     image: "https://placehold.co/100x100.png",
     hint: "happy family"
   },
@@ -17,7 +17,7 @@ const testimonials = [
   },
   {
     name: "Chen Wei",
-    quote: "As a photographer, I had high expectations. Ongeri Expeditions exceeded them all. They knew exactly where to go for the best light and wildlife encounters. I came back with my best portfolio yet.",
+    quote: "As a photographer, I had high expectations. Salkeri Expeditions exceeded them all. They knew exactly where to go for the best light and wildlife encounters. I came back with my best portfolio yet.",
     image: "https://placehold.co/100x100.png",
     hint: "photographer nature"
   },
