@@ -1,3 +1,4 @@
+
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Card, CardContent } from "@/components/ui/card";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
@@ -6,17 +7,20 @@ const testimonials = [
   {
     name: "The Miller Family",
     quote: "Salkeri Expeditions gave us the family trip of a lifetime. The attention to detail was incredible, and our guide's knowledge of the wildlife was simply astounding. Unforgettable!",
-    image: "https://source.unsplash.com/100x100/?happy,family,tourists",
+    image: "https://images.unsplash.com/photo-1560066982-9699a6134a47?w=100&h=100&fit=crop&q=80",
+    imageHint: "happy family"
   },
   {
     name: "Sarah & Tom",
     quote: "Our honeymoon was pure magic. From the luxury lodges to the private dinners under the stars, every moment felt like a dream. Thank you for the perfect romantic getaway.",
-    image: "https://source.unsplash.com/100x100/?happy,couple,safari",
+    image: "https://images.unsplash.com/photo-1594411440628-98e668a6f3a7?w=100&h=100&fit=crop&q=80",
+    imageHint: "happy couple"
   },
   {
     name: "Chen Wei",
     quote: "As a photographer, I had high expectations. Salkeri Expeditions exceeded them all. They knew exactly where to go for the best light and wildlife encounters. I came back with my best portfolio yet.",
-    image: "https://source.unsplash.com/100x100/?photographer,nature,wildlife",
+    image: "https://images.unsplash.com/photo-1505483689823-45c1a8535398?w=100&h=100&fit=crop&q=80",
+    imageHint: "wildlife photographer"
   },
 ];
 
@@ -42,7 +46,7 @@ export default function Testimonials() {
                   <Card className="bg-card border-primary/50">
                     <CardContent className="flex flex-col items-center justify-center p-8 text-center">
                       <Avatar className="w-20 h-20 mb-4 border-4 border-primary">
-                        <AvatarImage src={testimonial.image} alt={testimonial.name} />
+                        <AvatarImage src={testimonial.image} alt={testimonial.name} data-ai-hint={testimonial.imageHint} />
                         <AvatarFallback>{testimonial.name.charAt(0)}</AvatarFallback>
                       </Avatar>
                       <p className="text-lg italic text-foreground/90 mb-4">"{testimonial.quote}"</p>

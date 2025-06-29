@@ -38,6 +38,7 @@ export default function DestinationsPage() {
                         width={600}
                         height={400}
                         className="w-full h-72 object-cover group-hover:scale-105 transition-transform duration-500"
+                        data-ai-hint={dest.imageHint}
                       />
                     </Link>
                   </CardHeader>

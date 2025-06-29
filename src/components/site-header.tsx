@@ -11,7 +11,6 @@ const NavLink = ({ href, children }: { href: string; children: React.ReactNode }
   <Link
     href={href}
     className="text-sm font-medium uppercase tracking-wider text-foreground/80 hover:text-foreground transition-colors relative py-2 after:absolute after:bottom-0 after:left-0 after:h-[1px] after:w-full after:bg-primary after:origin-bottom-right after:scale-x-0 after:transition-transform after:duration-300 hover:after:origin-bottom-left hover:after:scale-x-100"
-    prefetch={false}
   >
     {children}
   </Link>
@@ -44,7 +43,7 @@ export default function SiteHeader() {
         </nav>
 
         <div className="hidden md:block absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
-          <Link href="/" className="flex flex-col items-center" prefetch={false}>
+          <Link href="/" className="flex flex-col items-center">
             <span className="font-headline text-3xl font-bold tracking-wider text-foreground">SALKERI</span>
             <span className="text-xs tracking-[0.3em] text-foreground/80">EXPEDITIONS</span>
           </Link>
@@ -56,7 +55,7 @@ export default function SiteHeader() {
 
         {/* Mobile Navigation */}
         <div className="md:hidden">
-           <Link href="/" className="flex flex-col items-center" prefetch={false}>
+           <Link href="/" className="flex flex-col items-center">
             <span className="font-headline text-2xl font-bold tracking-wider text-foreground">SALKERI</span>
             <span className="text-[0.6rem] tracking-[0.2em] text-foreground/80">EXPEDITIONS</span>
           </Link>
@@ -72,7 +71,7 @@ export default function SiteHeader() {
             </SheetTrigger>
             <SheetContent side="right" className="bg-background w-full">
               <nav className="flex flex-col items-center justify-center h-full gap-8">
-                <Link href="/" className="flex flex-col items-center mb-8" prefetch={false} onClick={() => setIsMenuOpen(false)}>
+                <Link href="/" className="flex flex-col items-center mb-8" onClick={() => setIsMenuOpen(false)}>
                   <span className="font-headline text-3xl font-bold tracking-wider text-primary">SALKERI</span>
                   <span className="text-xs tracking-[0.3em] text-foreground/80">EXPEDITIONS</span>
                 </Link>

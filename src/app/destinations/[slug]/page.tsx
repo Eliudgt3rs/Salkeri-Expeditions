@@ -35,12 +35,15 @@ export default function DestinationDetailPage({ params }: Props) {
       <SiteHeader />
       <main className="flex-1">
         <section className="relative h-[60vh] min-h-[400px] w-full flex items-center justify-center">
-          <div
-            className="absolute inset-0 bg-cover bg-center bg-no-repeat z-0"
-            style={{ backgroundImage: `url('${destination.image}')` }}
-          >
-            <div className="absolute inset-0 bg-black/60" />
-          </div>
+          <Image
+            src={destination.image}
+            alt={destination.title}
+            fill
+            className="object-cover"
+            data-ai-hint={destination.imageHint}
+            priority
+          />
+          <div className="absolute inset-0 bg-black/60" />
           <div className="relative z-10 text-center text-white p-4">
              <span className="text-lg font-bold uppercase text-primary tracking-widest">{destination.country}</span>
             <h1

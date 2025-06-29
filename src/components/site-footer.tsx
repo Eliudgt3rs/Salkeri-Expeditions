@@ -7,7 +7,7 @@ export default function SiteFooter() {
     <footer className="bg-card border-t border-white/10">
       <div className="container mx-auto px-4 md:px-6 py-12">
         <div className="flex flex-col items-center text-center">
-            <Link href="/" className="flex flex-col items-center gap-1 mb-4" prefetch={false}>
+            <Link href="/" className="flex flex-col items-center gap-1 mb-4">
               <span className="font-headline text-4xl font-bold tracking-wider text-primary">SALKERI</span>
               <span className="text-sm tracking-[0.3em] text-white/70">EXPEDITIONS</span>
             </Link>

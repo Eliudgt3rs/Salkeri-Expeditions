@@ -6,6 +6,7 @@ export type Destination = {
   description: string;
   longDescription: string;
   image: string;
+  imageHint: string;
   isPrime?: boolean;
 };
 
@@ -16,7 +17,8 @@ export const destinations: Destination[] = [
     country: 'Tanzania',
     description: 'Home to the Great Migration, an endless expanse of iconic African savanna.',
     longDescription: 'The Serengeti is the Africa of your dreams. Famous for the annual Great Migration, where millions of wildebeest and zebra thunder across the plains in search of fresh grazing. Its vast, sun-kissed landscapes are dotted with acacia trees and roaming herds of lion, leopard, elephant, and buffalo. It is the ultimate safari destination, offering unparalleled wildlife viewing year-round.',
-    image: 'https://source.unsplash.com/600x400/?serengeti,plains',
+    image: 'https://images.unsplash.com/photo-1534437431453-43b24dd585a9?w=600&h=400&fit=crop&q=80',
+    imageHint: 'serengeti plains',
     isPrime: true,
   },
   {
@@ -25,7 +27,8 @@ export const destinations: Destination[] = [
     country: 'Kenya',
     description: 'Kenya\'s crown jewel, offering breathtaking landscapes and abundant wildlife.',
     longDescription: 'Adjoining the Serengeti, the Maasai Mara is world-renowned for its exceptional population of big cats and as the northern stage for the Great Migration. The dramatic river crossings of the Mara River are a spectacle of nature. Beyond the migration, its rolling grasslands and acacia-studded plains are teeming with life, offering a classic safari experience.',
-    image: 'https://source.unsplash.com/600x400/?maasai,mara,elephants',
+    image: 'https://images.unsplash.com/photo-1516351989479-798632168537?w=600&h=400&fit=crop&q=80',
+    imageHint: 'maasai mara elephants',
     isPrime: true,
   },
   {
@@ -34,7 +37,8 @@ export const destinations: Destination[] = [
     country: 'Tanzania',
     description: 'A self-contained world of wildlife within a massive volcanic caldera.',
     longDescription: 'The Ngorongoro Crater is a geological marvel and a UNESCO World Heritage Site. This giant collapsed volcano forms a natural enclosure that hosts one of the densest concentrations of wildlife in Africa. It is one of the best places to see the Big Five, including the rare black rhino, all within a single day\'s game drive on the crater floor.',
-    image: 'https://source.unsplash.com/600x400/?ngorongoro,crater,wildlife',
+    image: 'https://images.unsplash.com/photo-1574635293787-73235b22b166?w=600&h=400&fit=crop&q=80',
+    imageHint: 'ngorongoro wildlife',
     isPrime: true,
   },
   {
@@ -43,7 +47,8 @@ export const destinations: Destination[] = [
     country: 'Kenya',
     description: 'Famous for its large elephant herds against the backdrop of Mount Kilimanjaro.',
     longDescription: 'Amboseli offers one of the most iconic images of Africa: vast herds of elephants with the snow-capped peak of Mount Kilimanjaro rising from the plains. The park\'s dry, dusty plains are fed by underground springs, creating lush wetlands that attract a rich diversity of wildlife, including lions, cheetahs, and a plethora of bird species.',
-    image: 'https://source.unsplash.com/600x400/?amboseli,elephants,kilimanjaro',
+    image: 'https://images.unsplash.com/photo-1519659528534-7fd733a832a0?w=600&h=400&fit=crop&q=80',
+    imageHint: 'amboseli elephants',
     isPrime: true,
   },
   {
@@ -52,7 +57,8 @@ export const destinations: Destination[] = [
     country: 'Tanzania',
     description: 'Pristine beaches, spice-scented history, and turquoise waters.',
     longDescription: 'The perfect post-safari retreat, Zanzibar is an archipelago of idyllic islands. Explore the narrow, winding streets of historic Stone Town, a UNESCO World Heritage site, relax on palm-fringed white sand beaches, and dive or snorkel in the crystal-clear waters of the Indian Ocean, rich with coral reefs and marine life.',
-    image: 'https://source.unsplash.com/600x400/?zanzibar,beach',
+    image: 'https://images.unsplash.com/photo-1518365283-32943e6a103c?w=600&h=400&fit=crop&q=80',
+    imageHint: 'zanzibar beach',
     isPrime: true,
   },
   {
@@ -61,7 +67,8 @@ export const destinations: Destination[] = [
     country: 'Tanzania',
     description: 'A landscape of baobab trees and home to massive elephant herds in the dry season.',
     longDescription: 'Tarangire is a land of giants, characterized by its ancient baobab trees and large elephant populations. During the dry season, the Tarangire River becomes a vital lifeline, attracting an incredible concentration of wildlife. It\'s a superb park for birdwatching and offers a more secluded safari experience.',
-    image: 'https://source.unsplash.com/600x400/?tarangire,baobab',
+    image: 'https://images.unsplash.com/photo-1621235339235-9b0b4578b3d6?w=600&h=400&fit=crop&q=80',
+    imageHint: 'tarangire baobab',
   },
   {
     slug: 'lake-nakuru-national-park',
@@ -69,7 +76,8 @@ export const destinations: Destination[] = [
     country: 'Kenya',
     description: 'A soda lake famous for its vast flocks of flamingos and rhino sanctuary.',
     longDescription: 'Lake Nakuru is a vibrant sea of pink, thanks to the thousands of flamingos that feed on the algae in its alkaline waters. The park is a dedicated rhino sanctuary, making it one of the best places in Kenya to see both black and white rhinos. The surrounding acacia woodland is also home to leopards, lions, and giraffes.',
-    image: 'https://source.unsplash.com/600x400/?lake,nakuru,flamingos',
+    image: 'https://images.unsplash.com/photo-1533758415-a63444745826?w=600&h=400&fit=crop&q=80',
+    imageHint: 'lake nakuru flamingos',
   },
   {
     slug: 'ruaha-national-park',
@@ -77,7 +85,8 @@ export const destinations: Destination[] = [
     country: 'Tanzania',
     description: 'Tanzania\'s largest park, a remote and rugged wilderness with a wild, untouched feel.',
     longDescription: 'For those seeking a true off-the-beaten-path adventure, Ruaha is the perfect destination. Its dramatic landscapes are home to a huge diversity of wildlife, including 10% of the world\'s lion population and one of East Africa\'s largest elephant herds. The park\'s remoteness ensures an exclusive and authentic safari experience.',
-    image: 'https://source.unsplash.com/600x400/?ruaha,river',
+    image: 'https://images.unsplash.com/photo-1617937447602-5807a346511a?w=600&h=400&fit=crop&q=80',
+    imageHint: 'ruaha river',
   },
   {
     slug: 'samburu-national-reserve',
@@ -85,7 +94,8 @@ export const destinations: Destination[] = [
     country: 'Kenya',
     description: 'An arid, rugged landscape home to unique wildlife known as the Samburu Special Five.',
     longDescription: 'Samburu offers a starkly beautiful, semi-arid landscape. It is here you can find the "Samburu Special Five": the Grevy\'s zebra, the reticulated giraffe, the Somali ostrich, the gerenuk, and the Beisa oryx. The Ewaso Ng\'iro river is a vital water source that attracts a plethora of other wildlife, including elephants and big cats.',
-    image: 'https://source.unsplash.com/600x400/?samburu,giraffe',
+    image: 'https://images.unsplash.com/photo-1550785186-26798b3c6a6f?w=600&h=400&fit=crop&q=80',
+    imageHint: 'samburu giraffe',
   },
   {
     slug: 'selous-game-reserve',
@@ -93,7 +103,8 @@ export const destinations: Destination[] = [
     country: 'Tanzania',
     description: 'One of the world\'s largest fauna reserves, offering boat safaris and walking tours.',
     longDescription: 'Formerly Selous Game Reserve, Nyerere National Park is a vast and wild area where the Rufiji River creates a network of lakes and channels. This allows for unique safari experiences, including boat safaris and guided walking tours, offering a different perspective on the African bush. It is home to large populations of wild dogs, hippos, and crocodiles.',
-    image: 'https://source.unsplash.com/600x400/?tanzania,wildlife,river',
+    image: 'https://images.unsplash.com/photo-1547471080-7cc2d5d88798?w=600&h=400&fit=crop&q=80',
+    imageHint: 'tanzania wildlife',
   },
   {
     slug: 'tsavo-national-park',
@@ -101,7 +112,8 @@ export const destinations: Destination[] = [
     country: 'Kenya',
     description: 'A vast wilderness of rocky landscapes, volcanic hills, and the legendary "red elephants".',
     longDescription: 'Comprising Tsavo East and Tsavo West, this is one of the largest parks in the world. It is known for its "red elephants" which dust themselves with the volcanic red soil, the man-eating lions of Tsavo legend, and the stunning Mzima Springs, where you can see hippos and crocodiles through an underwater viewing chamber.',
-    image: 'https://source.unsplash.com/600x400/?kenya,red,elephants',
+    image: 'https://images.unsplash.com/photo-1605338166948-c8d4a6a578a9?w=600&h=400&fit=crop&q=80',
+    imageHint: 'kenya elephants',
   },
   {
     slug: 'mahale-mountains-national-park',
@@ -109,7 +121,8 @@ export const destinations: Destination[] = [
     country: 'Tanzania',
     description: 'Remote and beautiful, offering the best chimpanzee trekking in Africa.',
     longDescription: 'Set on the shores of the crystal-clear Lake Tanganyika, the Mahale Mountains are a remote paradise. The park\'s main attraction is the chance to track and observe a large population of habituated chimpanzees in their natural habitat. It\'s a magical experience combining forest trekking with lakeside relaxation.',
-    image: 'https://source.unsplash.com/600x400/?chimpanzee,tanzania',
+    image: 'https://images.unsplash.com/photo-1594951922442-f55a153872c6?w=600&h=400&fit=crop&q=80',
+    imageHint: 'chimpanzee tanzania',
   },
   {
     slug: 'lake-manyara-national-park',
@@ -117,7 +130,8 @@ export const destinations: Destination[] = [
     country: 'Tanzania',
     description: 'Known for its tree-climbing lions, flamingo-lined lake, and diverse habitats.',
     longDescription: 'Nestled at the base of the Great Rift Valley escarpment, Lake Manyara offers a microcosm of the Tanzanian safari experience. Its diverse habitats include groundwater forest, acacia woodland, and the soda lake itself. It is famous for its elusive tree-climbing lions and large troops of baboons.',
-    image: 'https://source.unsplash.com/600x400/?tanzania,lions',
+    image: 'https://images.unsplash.com/photo-1604928141068-4505a4176d6f?w=600&h=400&fit=crop&q=80',
+    imageHint: 'tanzania lions',
   },
   {
     slug: 'laikipia-plateau',
@@ -125,7 +139,8 @@ export const destinations: Destination[] = [
     country: 'Kenya',
     description: 'A collection of private and community conservancies at the forefront of conservation.',
     longDescription: 'Laikipia is a stunning success story of conservation, a patchwork of community and private wildlife reserves. It is a vital sanctuary for endangered species, including Grevy\'s zebra and black rhino. Laikipia offers a wide range of activities not typically found in national parks, such as night drives, horse riding, and camel treks.',
-    image: 'https://source.unsplash.com/600x400/?kenya,rhino',
+    image: 'https://images.unsplash.com/photo-1574719003518-35f97460e6a3?w=600&h=400&fit=crop&q=80',
+    imageHint: 'kenya rhino',
   },
   {
     slug: 'gombe-stream-national-park',
@@ -133,7 +148,8 @@ export const destinations: Destination[] = [
     country: 'Tanzania',
     description: 'The site of Jane Goodall\'s pioneering chimpanzee research.',
     longDescription: 'Gombe is the smallest of Tanzania\'s national parks and the place where Jane Goodall began her groundbreaking research on chimpanzee behavior. Trekking through the steep forested slopes to find the chimps is an intimate and rewarding experience, offering a glimpse into the world she first revealed.',
-    image: 'https://source.unsplash.com/600x400/?gombe,chimpanzee',
+    image: 'https://images.unsplash.com/photo-1591948409852-5895470b3749?w=600&h=400&fit=crop&q=80',
+    imageHint: 'gombe chimpanzee',
   },
   {
     slug: 'diani-beach',
@@ -141,7 +157,8 @@ export const destinations: Destination[] = [
     country: 'Kenya',
     description: 'Kenya\'s most stunning beach, with brilliant white sand and lush greenery.',
     longDescription: 'After an adventurous safari, Diani Beach is the perfect place to unwind. Its long stretch of powdery white sand is lapped by the warm Indian Ocean and fringed with palm trees. It offers a range of watersports, beautiful coral reefs for snorkeling, and a relaxed, welcoming atmosphere.',
-    image: 'https://source.unsplash.com/600x400/?diani,beach',
+    image: 'https://images.unsplash.com/photo-1605312353724-a78da372991e?w=600&h=400&fit=crop&q=80',
+    imageHint: 'diani beach',
   },
   {
     slug: 'mount-kilimanjaro',
@@ -149,7 +166,8 @@ export const destinations: Destination[] = [
     country: 'Tanzania',
     description: 'Climb the highest freestanding mountain in the world, the legendary Mt. Kilimanjaro.',
     longDescription: 'Rising dramatically from the surrounding plains, Mount Kilimanjaro is Africa\'s highest peak. Climbing Kilimanjaro is a challenging but rewarding journey that takes you through five distinct climate zones, from rainforest to alpine desert and finally to the glacial summit. Reaching the "Roof of Africa" is an achievement of a lifetime.',
-    image: 'https://source.unsplash.com/600x400/?mount,kilimanjaro',
+    image: 'https://images.unsplash.com/photo-1589553422146-857c0a6b510c?w=600&h=400&fit=crop&q=80',
+    imageHint: 'mount kilimanjaro',
   },
   {
     slug: 'katavi-national-park',
@@ -157,7 +175,8 @@ export const destinations: Destination[] = [
     country: 'Tanzania',
     description: 'A remote, wild, and untouched park offering a glimpse of Africa as it once was.',
     longDescription: 'Katavi is for the safari purist. In the dry season, the Katuma River shrinks to a trickle, forcing thousands of hippos and crocodiles into small pools. The sheer density of wildlife is breathtaking. With very few visitors, a safari in Katavi feels like a true exploration of a forgotten land.',
-    image: 'https://source.unsplash.com/600x400/?tanzania,hippos',
+    image: 'https://images.unsplash.com/photo-1591866914378-6b88e1458516?w=600&h=400&fit=crop&q=80',
+    imageHint: 'tanzania hippos',
   },
   {
     slug: 'mount-kenya-national-park',
@@ -165,6 +184,7 @@ export const destinations: Destination[] = [
     country: 'Kenya',
     description: 'Africa\'s second-highest peak, offering a rugged landscape of peaks and glaciers.',
     longDescription: 'Mount Kenya is a stunning UNESCO World Heritage Site with a diverse range of ecosystems. While reaching the highest peaks is a technical climb, the surrounding park offers fantastic trekking opportunities through montane forests, bamboo zones, and moorlands, with the chance to see elephants, buffalo, and the rare bongo antelope.',
-    image: 'https://source.unsplash.com/600x400/?mount,kenya',
+    image: 'https://images.unsplash.com/photo-1559820068-d0646c0d8b8c?w=600&h=400&fit=crop&q=80',
+    imageHint: 'mount kenya',
   },
 ];
