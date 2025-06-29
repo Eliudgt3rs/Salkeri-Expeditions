@@ -12,7 +12,7 @@ import CountdownOffer from '@/components/countdown-offer';
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen flex-col bg-background">
+    <div className="flex min-h-screen flex-col bg-background overflow-x-hidden">
       <SiteHeader />
       <main className="flex-1 space-y-16 md:space-y-24 lg:space-y-32">
         <Hero />
