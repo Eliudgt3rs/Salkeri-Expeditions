@@ -3,29 +3,31 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
+import { useState } from 'react';
 import SiteHeader from '@/components/site-header';
-import SiteFooter from '@/components/site-footer';
-import { destinations } from '@/lib/destinations';
+import EnquiryModal from '@/components/enquiry';
+import Enquiry from '@/components/enquiry'; // Import the Enquiry component
+import { destinations, Destination } from '@/lib/destinations';
 import { Button } from '@/components/ui/button';
 import { MessageSquare } from 'lucide-react';
-import { useState, use } from 'react';
 
 type Props = {
   params: { slug: string };
 };
 
 export default function DestinationDetailPage({ params }: Props) {
-  const unwrappedParams = use(params);
-  const { slug } = unwrappedParams;
-  const destination = destinations.find((d) => d.slug === slug);
+  const { slug } = params;
+  const destination: Destination | undefined = destinations.find((d) => d.slug === slug);
 
   if (!destination) {
     notFound();
   }
 
   const [showAdditionalImages, setShowAdditionalImages] = useState(false);
+  const [isEnquiryModalOpen, setIsEnquiryModalOpen] = useState(false);
+  const [scrolledToContact, setScrolledToContact] = useState(false);
 
-  const whatsappNumber = "+254719790026"; 
+  const whatsappNumber = "+254719790026";
   const message = `Hello Salkeri Expeditions! I'm interested in planning a trip to ${destination.title}.`;
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
 
@@ -44,10 +46,8 @@ export default function DestinationDetailPage({ params }: Props) {
           />
           <div className="absolute inset-0 bg-black/60" />
           <div className="relative z-10 text-center text-white p-4">
-             <span className="text-lg font-bold uppercase text-primary tracking-widest">{destination.country}</span>
-            <h1
-              className="font-headline text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight"
-            >
+            <span className="text-lg font-bold uppercase text-primary tracking-widest">{destination.country}</span>
+            <h1 className="font-headline text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight">
               {destination.title}
             </h1>
           </div>
@@ -62,10 +62,14 @@ export default function DestinationDetailPage({ params }: Props) {
                 </p>
                 <p>{destination.longDescription}</p>
               </div>
+
               <div className="mt-12 text-center flex flex-col sm:flex-row items-center justify-center gap-4">
-                 <Button size="lg" asChild className="bg-primary hover:bg-primary/90 text-primary-foreground">
-                  <Link href="/#contact">Plan via Enquiry Form</Link>
+                <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground" asChild>
+                  <Link href="#contact">
+                    Fill Enquiry Form
+                  </Link>
                 </Button>
+
                 <Button size="lg" variant="outline" asChild>
                   <Link href={whatsappUrl} target="_blank" rel="noopener noreferrer">
                     <MessageSquare className="mr-2 h-5 w-5" />
@@ -76,20 +80,24 @@ export default function DestinationDetailPage({ params }: Props) {
             </div>
           </div>
         </section>
-        
+
         {destination.additionalImages && destination.additionalImages.length > 0 && (
           <section className="w-full py-16 md:py-24 lg:py-32 bg-muted">
             <div className="container mx-auto px-4 md:px-6 text-center">
-              {!showAdditionalImages && (
+              {!showAdditionalImages ? (
                 <Button size="lg" onClick={() => setShowAdditionalImages(true)}>
                   View More Images ({destination.additionalImages.length})
                 </Button>
-              )}
-              {showAdditionalImages && (
+              ) : (
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
                   {destination.additionalImages.map((image, index) => (
                     <div key={index} className="relative w-full h-64 overflow-hidden rounded-lg">
-                      <Image src={image} alt={`${destination.title} additional image ${index + 1}`} fill className="object-cover" />
+                      <Image
+                        src={image}
+                        alt={`${destination.title} additional image ${index + 1}`}
+                        fill
+                        className="object-cover"
+                      />
                     </div>
                   ))}
                 </div>
@@ -98,9 +106,15 @@ export default function DestinationDetailPage({ params }: Props) {
           </section>
         )}
 
+        {/* <EnquiryModal
+          isOpen={isEnquiryModalOpen}
+          onClose={() => setIsEnquiryModalOpen(false)}
+          defaultDestination={destination.title}
+        /> */}
 
+        <Enquiry defaultDestination={destination.title} /> {/* Add the Enquiry component here */}
       </main>
-      <SiteFooter />
+      {/* <SiteFooter /> */}
     </div>
   );
 }

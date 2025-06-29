@@ -40,7 +40,7 @@ export default function SafariPackages() {
                   </CardContent>
                   <CardFooter className="p-6 pt-0">
                     <Link href={`/destinations/${dest.slug}`} className="text-primary font-bold inline-flex items-center gap-2 group-hover:gap-3 transition-[gap]">
-                      Read More <ArrowRight className="h-4 w-4" />
+ Read More <ArrowRight className="h-4 w-4" />
                     </Link>
                   </CardFooter>
                 </Card>

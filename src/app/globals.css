@@ -4,34 +4,59 @@
 
 @layer base {
   :root {
-    --background: 0 0% 7%; /* #121212 */
-    --foreground: 0 0% 98%; /* #fafafa */
-    --card: 0 0% 11%; /* #1c1c1c */
-    --card-foreground: 0 0% 98%;
-    --popover: 0 0% 7%;
-    --popover-foreground: 0 0% 98%;
-    --primary: 41 53% 50%; /* #c3983c */
-    --primary-foreground: 0 0% 7%;
-    --secondary: 0 0% 15%;
-    --secondary-foreground: 0 0% 98%;
-    --muted: 0 0% 15%;
-    --muted-foreground: 0 0% 63%;
-    --accent: 41 53% 50%; /* #c3983c */
-    --accent-foreground: 0 0% 7%;
+    --background: 30 20% 96%; /* A light beige/off-white */
+    --foreground: 0 0% 10%;
+    --card: 0 0% 100%; /* White */
+    --card-foreground: 0 0% 10%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 10%;
+    --primary: 60 30% 50%; /* A lighter shade of olive */
+    --primary-foreground: 0 0% 98%; /* White for contrast */
+    --secondary: 0 0% 90%;
+    --secondary-foreground: 0 0% 10%;
+    --muted: 0 0% 90%;
+    --muted-foreground: 0 0% 40%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
-    --border: 0 0% 14%;
-    --input: 0 0% 14%;
-    --ring: 41 53% 50%;
+    --border: 0 0% 80%;
+    --input: 0 0% 90%;
+    --ring: 60 30% 50%;
     --radius: 0.5rem;
-    --chart-1: 41 53% 50%;
-    --chart-2: 20 95% 55%;
-    --chart-3: 10 85% 60%;
+    --chart-1: 60 30% 50%; /* Match primary */
+    --chart-2: 30 70% 40%; /* Adjusted accent */
+    --chart-3: 10 60% 50%;
     --chart-4: 0 0% 80%;
     --chart-5: 30 90% 50%;
+    --accent: 30 70% 40%; /* A slightly less intense burnt sienna */
+    --accent-foreground: 0 0% 10%;
   }
 
-  /* The reference site is dark-only, so we won't need a separate .dark class config */
+  .dark {
+    --background: 0 0% 7%; /* Near black */
+    --foreground: 0 0% 98%; /* White */
+    --card: 0 0% 10%;
+    --card-foreground: 0 0% 98%;
+    --popover: 0 0% 10%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 60 30% 50%; /* Keep primary consistent */
+    --primary-foreground: 0 0% 98%;
+    --secondary: 0 0% 20%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 0 0% 20%;
+    --muted-foreground: 0 0% 60%;
+    --destructive: 0 60% 50%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 25%;
+    --input: 0 0% 15%;
+    --ring: 60 30% 50%;
+    --chart-1: 60 30% 50%;
+    --chart-2: 30 70% 60%; /* Adjust accent for dark mode */
+    --chart-3: 10 60% 60%;
+    --chart-4: 0 0% 40%;
+    --chart-5: 30 90% 60%;
+    --accent: 30 70% 60%;
+    --accent-foreground: 0 0% 98%;
+  }
 }
 
 @layer base {
