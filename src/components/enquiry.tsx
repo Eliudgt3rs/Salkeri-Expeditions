@@ -86,10 +86,12 @@ export default function Enquiry({ defaultDestination }: EnquiryProps) {
     }
 
     const templateParams = {
-      from_name: values.name,
-      from_email: values.email,
-      to_name: "Salkeri Expeditions",
-      message: `Destination: ${values.destination}\nParty Size: ${values.partySize}\nPreferred Start Date: ${values.preferredDates.toDateString()}\nInterests: ${values.interests || 'Not specified'}`
+      name: values.name,
+      email: values.email,
+      destination: values.destination,
+      partySize: values.partySize.toString(),
+      startDate: values.preferredDates.toDateString(),
+      interests: values.interests || 'Not specified'
     };
 
     try {
@@ -98,7 +100,13 @@ export default function Enquiry({ defaultDestination }: EnquiryProps) {
         title: "Inquiry Sent!",
         description: "Thank you for your interest. Our team will be in touch with you shortly.",
       });
-      form.reset();
+      form.reset({
+        name: "",
+        email: "",
+        partySize: 1,
+        interests: "",
+        destination: defaultDestination || "",
+      });
     } catch (error) {
       console.error('EmailJS error:', error);
       toast({
@@ -189,7 +197,7 @@ export default function Enquiry({ defaultDestination }: EnquiryProps) {
                   render={({ field }) => (
                     <FormItem>
                       <FormLabel>Preferred Destination</FormLabel>
-                      <Select onValueChange={field.onChange} defaultValue={field.value}>
+                      <Select onValueChange={field.onChange} value={field.value || ''}>
                         <FormControl>
                           <SelectTrigger>
                             <SelectValue placeholder="Select a destination" />
