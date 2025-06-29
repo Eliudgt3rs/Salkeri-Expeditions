@@ -27,8 +27,8 @@ export default function AboutPage() {
 
         <section id="about-details" className="w-full pb-16 md:pb-24 lg:pb-32 bg-card">
           <div className="container mx-auto px-4 md:px-6">
-            <div className="grid gap-12 md:grid-cols-2 md:gap-20 items-center">
-              <div className="space-y-6">
+            <div className="flex flex-col md:flex-row gap-12 md:gap-20 items-center">
+              <div className="space-y-6 order-2 md:order-1 text-center md:text-left">
                 <h2 className="font-headline text-3xl md:text-4xl font-bold tracking-tight text-primary">
                   More Than a Tour, It's a Connection
                 </h2>
@@ -42,7 +42,7 @@ export default function AboutPage() {
                   <Link href="/destinations">Explore Our Destinations</Link>
                 </Button>
               </div>
-              <div className="flex items-center justify-center">
+              <div className="flex items-center justify-center order-1 md:order-2">
                 <Image
                   src="/maasai-guide.jpg"
                   alt="A Maasai guide looking over the savanna"
