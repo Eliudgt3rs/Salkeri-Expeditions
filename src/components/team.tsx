@@ -18,7 +18,7 @@ const teamMembers = [
     imageHint: "travel planner"
   },
   {
-    name: "David Kimani",
+    name: "David Musau",
     role: "Senior Safari Guide",
     specialty: "Specialist in ornithology and cultural expeditions.",
     image: "/David.webp",
