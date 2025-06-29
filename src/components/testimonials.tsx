@@ -6,20 +6,17 @@ const testimonials = [
   {
     name: "The Miller Family",
     quote: "Salkeri Expeditions gave us the family trip of a lifetime. The attention to detail was incredible, and our guide's knowledge of the wildlife was simply astounding. Unforgettable!",
-    image: "https://placehold.co/100x100.png",
-    hint: "happy family"
+    image: "https://source.unsplash.com/100x100/?happy,family,tourists",
   },
   {
     name: "Sarah & Tom",
     quote: "Our honeymoon was pure magic. From the luxury lodges to the private dinners under the stars, every moment felt like a dream. Thank you for the perfect romantic getaway.",
-    image: "https://placehold.co/100x100.png",
-    hint: "happy couple"
+    image: "https://source.unsplash.com/100x100/?happy,couple,safari",
   },
   {
     name: "Chen Wei",
     quote: "As a photographer, I had high expectations. Salkeri Expeditions exceeded them all. They knew exactly where to go for the best light and wildlife encounters. I came back with my best portfolio yet.",
-    image: "https://placehold.co/100x100.png",
-    hint: "photographer nature"
+    image: "https://source.unsplash.com/100x100/?photographer,nature,wildlife",
   },
 ];
 
@@ -46,7 +43,7 @@ export default function Testimonials() {
                     <CardContent className="flex flex-col items-center justify-center p-8 text-center">
                       <Avatar className="w-20 h-20 mb-4 border-4 border-primary">
                         <AvatarImage src={testimonial.image} alt={testimonial.name} />
-                        <AvatarFallback data-ai-hint={testimonial.hint}>{testimonial.name.charAt(0)}</AvatarFallback>
+                        <AvatarFallback>{testimonial.name.charAt(0)}</AvatarFallback>
                       </Avatar>
                       <p className="text-lg italic text-foreground/90 mb-4">"{testimonial.quote}"</p>
                       <cite className="font-headline text-xl font-bold not-italic text-primary">{testimonial.name}</cite>

@@ -38,7 +38,6 @@ export default function DestinationDetailPage({ params }: Props) {
           <div
             className="absolute inset-0 bg-cover bg-center bg-no-repeat z-0"
             style={{ backgroundImage: `url('${destination.image}')` }}
-            data-ai-hint={destination.hint}
           >
             <div className="absolute inset-0 bg-black/60" />
           </div>

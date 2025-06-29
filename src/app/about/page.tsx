@@ -44,12 +44,11 @@ export default function AboutPage() {
               </div>
               <div className="flex items-center justify-center">
                 <Image
-                  src="https://placehold.co/600x700.png"
+                  src="https://source.unsplash.com/600x700/?maasai,guide"
                   alt="A Maasai guide looking over the savanna"
                   width={600}
                   height={700}
                   className="rounded-lg object-cover shadow-2xl"
-                  data-ai-hint="maasai guide"
                 />
               </div>
             </div>

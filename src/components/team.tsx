@@ -7,22 +7,19 @@ const teamMembers = [
     name: "Jomo Kenyatta",
     role: "Founder & Lead Guide",
     specialty: "Expert in wildlife tracking and photographic safaris.",
-    image: "https://placehold.co/400x400.png",
-    hint: "safari guide"
+    image: "https://source.unsplash.com/400x400/?safari,guide,man",
   },
   {
     name: "Amina Abdalla",
     role: "Safari Operations Manager",
     specialty: "Ensures every detail of your journey is seamless and perfect.",
-    image: "https://placehold.co/400x400.png",
-    hint: "woman travel planner"
+    image: "https://source.unsplash.com/400x400/?woman,travel,planner",
   },
   {
     name: "David Kimani",
     role: "Senior Safari Guide",
     specialty: "Specialist in ornithology and cultural expeditions.",
-    image: "https://placehold.co/400x400.png",
-    hint: "man smiling"
+    image: "https://source.unsplash.com/400x400/?kenyan,man,smiling",
   },
 ];
 
@@ -46,7 +43,6 @@ export default function Team() {
                     width={400}
                     height={400}
                     className="w-full h-80 object-cover object-top"
-                    data-ai-hint={member.hint}
                   />
               </CardHeader>
               <CardContent className="p-6">

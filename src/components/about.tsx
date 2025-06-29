@@ -24,12 +24,11 @@ export default function About() {
           </div>
           <div className="flex items-center justify-center">
             <Image
-              src="https://placehold.co/600x450.png"
+              src="https://source.unsplash.com/600x450/?lion,serengeti"
               alt="A lion resting in the Serengeti"
               width={600}
               height={450}
               className="rounded-lg object-cover shadow-2xl"
-              data-ai-hint="lion serengeti"
             />
           </div>
         </div>

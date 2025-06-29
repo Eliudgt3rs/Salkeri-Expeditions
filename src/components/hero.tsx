@@ -7,8 +7,7 @@ export default function Hero() {
     <section id="home" className="relative h-screen min-h-[700px] w-full flex items-center justify-center">
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat z-0"
-        style={{ backgroundImage: "url('https://placehold.co/1920x1080.png')" }}
-        data-ai-hint="tanzania safari"
+        style={{ backgroundImage: "url('https://source.unsplash.com/1920x1080/?tanzania,safari')" }}
       >
         <div className="absolute inset-0 bg-black/60" />
       </div>
