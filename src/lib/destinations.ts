@@ -36,7 +36,7 @@ export const destinations: Destination[] = [
     country: 'Kenya',
     description: 'Kenya\'s crown jewel, offering breathtaking landscapes and abundant wildlife.',
     longDescription: 'Adjoining the Serengeti, the Maasai Mara is world-renowned for its exceptional population of big cats and as the northern stage for the Great Migration. The dramatic river crossings of the Mara River are a spectacle of nature. Beyond the migration, its rolling grasslands and acacia-studded plains are teeming with life, offering a classic safari experience.',
-    image: '/Maasaimara.jpg',
+    image: '/Masaaimara.jpg',
     imageHint: 'maasai mara wildebeest crossing',
     additionalImages: [
       '/destinations/maasai-mara-1.jpg',
