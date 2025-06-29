@@ -24,7 +24,7 @@ export default function About() {
           </div>
           <div className="flex items-center justify-center">
             <Image
-              src="https://images.unsplash.com/photo-1614234479389-947614d02b66?q=80&w=2070&auto=format&fit=crop"
+              src="https://placehold.co/600x450.png"
               alt="A lion resting in the Serengeti"
               width={600}
               height={450}

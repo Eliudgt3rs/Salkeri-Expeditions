@@ -7,19 +7,19 @@ const testimonials = [
   {
     name: "The Miller Family",
     quote: "Salkeri Expeditions gave us the family trip of a lifetime. The attention to detail was incredible, and our guide's knowledge of the wildlife was simply astounding. Unforgettable!",
-    image: "https://images.unsplash.com/photo-1555952517-2e8e729e0b44?q=80&w=1964&auto=format&fit=crop",
+    image: "https://placehold.co/80x80.png",
     imageHint: "happy family"
   },
   {
     name: "Sarah & Tom",
     quote: "Our honeymoon was pure magic. From the luxury lodges to the private dinners under the stars, every moment felt like a dream. Thank you for the perfect romantic getaway.",
-    image: "https://images.unsplash.com/photo-1542042161-d1445701a32b?q=80&w=1964&auto=format&fit=crop",
+    image: "https://placehold.co/80x80.png",
     imageHint: "happy couple"
   },
   {
     name: "Chen Wei",
     quote: "As a photographer, I had high expectations. Salkeri Expeditions exceeded them all. They knew exactly where to go for the best light and wildlife encounters. I came back with my best portfolio yet.",
-    image: "https://images.unsplash.com/photo-1520341280432-4749d4d7e297?q=80&w=1974&auto=format&fit=crop",
+    image: "https://placehold.co/80x80.png",
     imageHint: "wildlife photographer"
   },
 ];
