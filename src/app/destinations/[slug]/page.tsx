@@ -1,3 +1,4 @@
+"use client";
 
 import Image from 'next/image';
 import Link from 'next/link';
@@ -7,26 +8,24 @@ import SiteFooter from '@/components/site-footer';
 import { destinations } from '@/lib/destinations';
 import { Button } from '@/components/ui/button';
 import { MessageSquare } from 'lucide-react';
+import { useState, use } from 'react';
 
 type Props = {
   params: { slug: string };
 };
 
-export async function generateStaticParams() {
-  return destinations.map((dest) => ({
-    slug: dest.slug,
-  }));
-}
-
 export default function DestinationDetailPage({ params }: Props) {
-  const { slug } = params;
+  const unwrappedParams = use(params);
+  const { slug } = unwrappedParams;
   const destination = destinations.find((d) => d.slug === slug);
 
   if (!destination) {
     notFound();
   }
 
-  const whatsappNumber = "255123456789"; 
+  const [showAdditionalImages, setShowAdditionalImages] = useState(false);
+
+  const whatsappNumber = "+254719790026"; 
   const message = `Hello Salkeri Expeditions! I'm interested in planning a trip to ${destination.title}.`;
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
 
@@ -77,6 +76,28 @@ export default function DestinationDetailPage({ params }: Props) {
             </div>
           </div>
         </section>
+        
+        {destination.additionalImages && destination.additionalImages.length > 0 && (
+          <section className="w-full py-16 md:py-24 lg:py-32 bg-muted">
+            <div className="container mx-auto px-4 md:px-6 text-center">
+              {!showAdditionalImages && (
+                <Button size="lg" onClick={() => setShowAdditionalImages(true)}>
+                  View More Images ({destination.additionalImages.length})
+                </Button>
+              )}
+              {showAdditionalImages && (
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
+                  {destination.additionalImages.map((image, index) => (
+                    <div key={index} className="relative w-full h-64 overflow-hidden rounded-lg">
+                      <Image src={image} alt={`${destination.title} additional image ${index + 1}`} fill className="object-cover" />
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
+          </section>
+        )}
+
 
       </main>
       <SiteFooter />

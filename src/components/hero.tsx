@@ -14,7 +14,7 @@ export default function Hero() {
           playsInline
           className="w-full h-full object-cover"
         >
-          <source src="https://videos.pexels.com/video-files/2832328/2832328-hd_1920_1080_25fps.mp4" type="video/mp4" />
+          <source src="/HeroVid.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
         <div className="absolute inset-0 bg-black/60" />

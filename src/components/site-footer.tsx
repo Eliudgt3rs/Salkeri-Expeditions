@@ -12,7 +12,7 @@ export default function SiteFooter() {
               <span className="text-sm tracking-[0.3em] text-white/70">EXPEDITIONS</span>
             </Link>
             <p className="text-sm text-muted-foreground max-w-md">
-              Specializing in bespoke, private safaris in Tanzania, we create unforgettable journeys into the heart of the wild.
+              Specializing in bespoke, private safaris in Tanzania and Kenya, we create unforgettable journeys into the heart of the wild.
             </p>
           <div className="flex gap-6 my-6">
               <Link href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">

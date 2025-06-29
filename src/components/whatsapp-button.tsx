@@ -16,7 +16,7 @@ const WhatsappIcon = () => (
 
 export default function WhatsappButton() {
   // IMPORTANT: Replace this with your actual WhatsApp number, including the country code without the '+'
-  const whatsappNumber = "255123456789"; 
+  const whatsappNumber = "+254719790026"; 
   const message = "Hello Salkeri Expeditions! I'm interested in booking a safari.";
   
   return (
