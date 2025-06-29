@@ -1,3 +1,4 @@
+
 import Image from 'next/image';
 import { Button } from './ui/button';
 import Link from 'next/link';
@@ -18,7 +19,7 @@ export default function About() {
               Your journey is more than just a trip; it's a story waiting to be written. From the endless plains of the Serengeti to the pristine beaches of Zanzibar, we handle every detail with care, ensuring a seamless and extraordinary adventure.
             </p>
             <Button size="lg" asChild className="bg-primary hover:bg-primary/90 text-primary-foreground">
-              <Link href="#contact">Learn More About Us</Link>
+              <Link href="/about">Learn More About Us</Link>
             </Button>
           </div>
           <div className="flex items-center justify-center">

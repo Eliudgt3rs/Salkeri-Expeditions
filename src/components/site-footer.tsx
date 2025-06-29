@@ -1,3 +1,4 @@
+
 import Link from 'next/link';
 import { Instagram, Facebook, Twitter } from 'lucide-react';
 
@@ -25,10 +26,10 @@ export default function SiteFooter() {
               </Link>
             </div>
              <ul className="flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm text-muted-foreground">
-              <li><Link href="#about" className="hover:text-primary transition-colors">About Us</Link></li>
-              <li><Link href="#destinations" className="hover:text-primary transition-colors">Destinations</Link></li>
-              <li><Link href="#guides" className="hover:text-primary transition-colors">Our Guides</Link></li>
-              <li><Link href="#contact" className="hover:text-primary transition-colors">Contact</Link></li>
+              <li><Link href="/about" className="hover:text-primary transition-colors">About Us</Link></li>
+              <li><Link href="/destinations" className="hover:text-primary transition-colors">Destinations</Link></li>
+              <li><Link href="/#guides" className="hover:text-primary transition-colors">Our Guides</Link></li>
+              <li><Link href="/#contact" className="hover:text-primary transition-colors">Contact</Link></li>
             </ul>
         </div>
         <div className="mt-8 border-t border-white/10 pt-8 text-center text-sm text-muted-foreground">

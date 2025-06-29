@@ -1,3 +1,4 @@
+
 "use client";
 
 import Link from 'next/link';
@@ -36,10 +37,10 @@ export default function SiteHeader() {
         
         {/* Desktop Navigation */}
         <nav className="hidden items-center gap-8 md:flex">
-          <NavLink href="#home">Home</NavLink>
-          <NavLink href="#destinations">Destinations</NavLink>
-          <NavLink href="#about">About</NavLink>
-          <NavLink href="#team">Guides</NavLink>
+          <NavLink href="/">Home</NavLink>
+          <NavLink href="/destinations">Destinations</NavLink>
+          <NavLink href="/about">About</NavLink>
+          <NavLink href="/#guides">Guides</NavLink>
         </nav>
 
         <div className="hidden md:block absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
@@ -75,10 +76,10 @@ export default function SiteHeader() {
                   <span className="font-headline text-3xl font-bold tracking-wider text-primary">SALKERI</span>
                   <span className="text-xs tracking-[0.3em] text-foreground/80">EXPEDITIONS</span>
                 </Link>
-                <Link href="#home" onClick={() => setIsMenuOpen(false)} className="text-2xl font-medium">Home</Link>
-                <Link href="#destinations" onClick={() => setIsMenuOpen(false)} className="text-2xl font-medium">Destinations</Link>
-                <Link href="#about" onClick={() => setIsMenuOpen(false)} className="text-2xl font-medium">About</Link>
-                <Link href="#team" onClick={() => setIsMenuOpen(false)} className="text-2xl font-medium">Guides</Link>
+                <Link href="/" onClick={() => setIsMenuOpen(false)} className="text-2xl font-medium">Home</Link>
+                <Link href="/destinations" onClick={() => setIsMenuOpen(false)} className="text-2xl font-medium">Destinations</Link>
+                <Link href="/about" onClick={() => setIsMenuOpen(false)} className="text-2xl font-medium">About</Link>
+                <Link href="/#guides" onClick={() => setIsMenuOpen(false)} className="text-2xl font-medium">Guides</Link>
                 <Button asChild size="lg" className="mt-8" onClick={() => setIsMenuOpen(false)}>
                   <Link href="#contact">Plan Your Trip</Link>
                 </Button>

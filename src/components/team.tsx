@@ -1,3 +1,4 @@
+
 import Image from 'next/image';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 
@@ -27,7 +28,7 @@ const teamMembers = [
 
 export default function Team() {
   return (
-    <section id="team" className="w-full py-16 md:py-24 lg:py-32 bg-card">
+    <section id="guides" className="w-full py-16 md:py-24 lg:py-32 bg-card">
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
           <h2 className="font-headline text-4xl md:text-5xl font-bold tracking-tighter text-primary">Meet Our Expert Guides</h2>
