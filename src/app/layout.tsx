@@ -4,6 +4,7 @@ import {Toaster} from "@/components/ui/toaster";
 import './globals.css';
 import WhatsappButton from '@/components/whatsapp-button';
 import { cn } from '@/lib/utils';
+import CookieBanner from '@/components/cookie-banner';
 
 const fontHeadline = Playfair_Display({
   subsets: ['latin'],
@@ -36,6 +37,7 @@ export default function RootLayout({
         {children}
         <Toaster />
         <WhatsappButton />
+        <CookieBanner />
       </body>
     </html>
   );
