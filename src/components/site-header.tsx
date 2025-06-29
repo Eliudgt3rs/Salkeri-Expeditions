@@ -38,6 +38,8 @@ export default function SiteHeader() {
         <nav className="hidden items-center gap-8 md:flex">
           <NavLink href="#home">Home</NavLink>
           <NavLink href="#destinations">Destinations</NavLink>
+          <NavLink href="#about">About</NavLink>
+          <NavLink href="#team">Guides</NavLink>
         </nav>
 
         <div className="hidden md:block absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
@@ -46,11 +48,6 @@ export default function SiteHeader() {
             <span className="text-xs tracking-[0.3em] text-foreground/80">EXPEDITIONS</span>
           </Link>
         </div>
-
-        <nav className="hidden items-center gap-8 md:flex">
-          <NavLink href="#about">About</NavLink>
-          <NavLink href="#team">Guides</NavLink>
-        </nav>
 
         <Button asChild className="hidden md:inline-flex bg-primary hover:bg-primary/90 text-primary-foreground">
           <Link href="#contact">Plan Your Trip</Link>
