@@ -4,24 +4,24 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/com
 
 const teamMembers = [
   {
-    name: "Jomo Kenyatta",
+    name: "Richard Ouko",
     role: "Founder & Lead Guide",
     specialty: "Expert in wildlife tracking and photographic safaris.",
-    image: "https://placehold.co/400x400.png",
+    image: "/Game_Rangers.webp",
     imageHint: "safari guide"
   },
   {
     name: "Amina Abdalla",
     role: "Safari Operations Manager",
     specialty: "Ensures every detail of your journey is seamless and perfect.",
-    image: "https://placehold.co/400x400.png",
+    image: "/Amina.avif",
     imageHint: "travel planner"
   },
   {
     name: "David Kimani",
     role: "Senior Safari Guide",
     specialty: "Specialist in ornithology and cultural expeditions.",
-    image: "https://placehold.co/400x400.png",
+    image: "/David.webp",
     imageHint: "kenyan man"
   },
 ];
