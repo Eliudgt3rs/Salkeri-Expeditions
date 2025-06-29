@@ -13,7 +13,7 @@ export default function SafariPackages() {
     <section id="destinations" className="w-full py-16 md:py-24 lg:py-32">
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
-          <h2 className="font-headline text-4xl md:text-5xl font-bold tracking-tighter text-primary">Explore Our Prime Destinations</h2>
+          <h2 className="font-headline text-3xl md:text-4xl lg:text-5xl font-bold tracking-tighter text-primary">Explore Our Prime Destinations</h2>
           <p className="max-w-[900px] text-lg text-foreground/80">
             Tanzania and Kenya offer a diverse range of safari experiences. Here are some of our most requested destinations to ignite your imagination.
           </p>

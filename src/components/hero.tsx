@@ -22,7 +22,7 @@ export default function Hero() {
       </div>
       <div className="relative z-10 text-center text-white p-4">
         <h1
-          className="font-headline text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-bold tracking-tight mb-4 animate-fade-in-up"
+          className="font-headline text-4xl md:text-6xl lg:text-8xl font-bold tracking-tight mb-4 animate-fade-in-up"
         >
           Unforgettable Safari Experiences
         </h1>
@@ -37,13 +37,13 @@ export default function Hero() {
            style={{ animationDelay: '400ms', animationFillMode: 'backwards' }}
         >
           <Button size="lg" asChild className="bg-accent hover:bg-accent/90 text-white">
-            <Link href="#contact">Plan Your Trip</Link>
+            <Link href="/#contact">Plan Your Trip</Link>
           </Button>
         </div>
       </div>
       <div className="absolute bottom-10 left-1/2 -translate-x-1/2 z-10">
         <Link href="#about" aria-label="Scroll to about section">
-          <div className="text-white flex flex-col items-center gap-2">
+          <div className="text-white flex flex-col items-center gap-2 animate-bounce">
             <Mouse className="h-10 w-10" />
             <span className="text-sm tracking-widest uppercase">Scroll Down</span>
           </div>

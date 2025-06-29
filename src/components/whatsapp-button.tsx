@@ -24,7 +24,7 @@ export default function WhatsappButton() {
       href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`}
       target="_blank"
       rel="noopener noreferrer"
-      className="fixed bottom-6 right-6 z-50 bg-[#25D366] hover:bg-[#128C7E] transition-colors text-white rounded-full p-3 sm:py-2 sm:px-4 shadow-lg flex items-center justify-center gap-2"
+      className="fixed bottom-6 right-6 z-50 bg-[#25D366] hover:bg-[#128C7E] transition-colors text-white rounded-full p-3 shadow-lg flex items-center justify-center gap-2 sm:p-4"
       aria-label="Contact us on WhatsApp"
     >
       <WhatsappIcon />

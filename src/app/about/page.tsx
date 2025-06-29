@@ -15,7 +15,7 @@ export default function AboutPage() {
         <section className="w-full pt-24 pb-16 md:pt-32 md:pb-24 lg:pt-40 lg:pb-32">
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-4xl mx-auto text-center">
-              <h1 className="font-headline text-4xl md:text-6xl font-bold tracking-tight text-primary">
+              <h1 className="font-headline text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-primary">
                 Our Story: The Heart of the Safari
               </h1>
               <p className="mt-6 text-lg md:text-xl text-foreground/80">

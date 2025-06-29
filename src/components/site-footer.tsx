@@ -8,8 +8,8 @@ export default function SiteFooter() {
       <div className="container mx-auto px-4 md:px-6 py-12">
         <div className="flex flex-col items-center text-center">
             <Link href="/" className="flex flex-col items-center gap-1 mb-4">
-              <span className="font-headline text-4xl font-bold tracking-wider text-primary">SALKERI</span>
-              <span className="text-sm tracking-widest sm:tracking-[0.3em] text-white/70">EXPEDITIONS</span>
+              <span className="font-headline text-3xl md:text-4xl font-bold tracking-wider text-primary">SALKERI</span>
+              <span className="text-sm tracking-widest sm:tracking-[0.2em] text-white/70">EXPEDITIONS</span>
             </Link>
             <p className="text-sm text-muted-foreground max-w-md">
               Specializing in bespoke, private safaris in Tanzania and Kenya, we create unforgettable journeys into the heart of the wild.

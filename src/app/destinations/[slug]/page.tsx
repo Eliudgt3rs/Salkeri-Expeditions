@@ -45,7 +45,7 @@ export default function DestinationDetailPage({ params }: Props) {
           <div className="absolute inset-0 bg-black/60" />
           <div className="relative z-10 text-center text-white p-4">
             <span className="text-lg font-bold uppercase text-accent tracking-widest">{destination.country}</span>
-            <h1 className="font-headline text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-bold tracking-tight">
+            <h1 className="font-headline text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight">
               {destination.title}
             </h1>
           </div>
@@ -63,7 +63,7 @@ export default function DestinationDetailPage({ params }: Props) {
 
               <div className="mt-12 text-center">
                   <p className="text-sm uppercase tracking-wider text-muted-foreground">Starting from</p>
-                  <p className="font-headline text-5xl font-bold text-primary">${destination.price.toLocaleString()}</p>
+                  <p className="font-headline text-4xl md:text-5xl font-bold text-primary">${destination.price.toLocaleString()}</p>
                   <p className="text-muted-foreground">per person</p>
               </div>
 

@@ -31,7 +31,7 @@ export default function Team() {
     <section id="guides" className="w-full py-16 md:py-24 lg:py-32 bg-card">
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
-          <h2 className="font-headline text-4xl md:text-5xl font-bold tracking-tighter text-primary">Meet Our Expert Guides</h2>
+          <h2 className="font-headline text-3xl md:text-4xl lg:text-5xl font-bold tracking-tighter text-primary">Meet Our Expert Guides</h2>
           <p className="max-w-[900px] text-lg text-foreground/80">
             Our team is the heart of your safari. Passionate, knowledgeable, and deeply connected to Tanzania.
           </p>

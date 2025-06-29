@@ -123,7 +123,7 @@ export default function Enquiry({ defaultDestination }: EnquiryProps) {
     <section id="contact" className="w-full py-16 md:py-24 lg:py-32 bg-background">
       <div className="container mx-auto px-4 md:px-6">
         <div className="max-w-4xl mx-auto text-center mb-12">
-          <h2 className="font-headline text-4xl md:text-5xl font-bold tracking-tighter text-primary">
+          <h2 className="font-headline text-3xl md:text-4xl lg:text-5xl font-bold tracking-tighter text-primary">
             Let's Plan Your Trip
           </h2>
           <p className="text-lg text-foreground/80 mt-4">

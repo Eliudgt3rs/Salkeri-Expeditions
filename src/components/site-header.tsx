@@ -18,8 +18,8 @@ const NavLink = ({ href, children, onClick }: { href: string; children: React.Re
 
 const SiteLogo = () => (
   <Link href="/" className="flex flex-col items-center justify-center flex-shrink-0" aria-label="Home">
-    <span className="font-headline text-3xl font-bold tracking-wider text-primary">SALKERI</span>
-    <span className="text-xs tracking-[0.3em] text-foreground/80">EXPEDITIONS</span>
+    <span className="font-headline text-2xl md:text-3xl font-bold tracking-wider text-primary">SALKERI</span>
+    <span className="text-xs tracking-[0.2em] md:tracking-[0.3em] text-foreground/80">EXPEDITIONS</span>
   </Link>
 );
 
@@ -56,15 +56,11 @@ export default function SiteHeader() {
 
   return (
     <header className={`sticky top-0 z-50 w-full transition-all duration-300 ${isScrolled ? 'bg-background/95 backdrop-blur-sm shadow-md' : 'bg-transparent'}`}>
-      <div className="container mx-auto flex h-24 items-center px-4 md:px-6">
+      <div className="container mx-auto flex h-20 items-center justify-between px-4 md:px-6">
 
-        {/* Left Section */}
-        <div className="flex-1 flex justify-start">
-          <div className="hidden md:flex">
-            <SiteLogo />
-          </div>
-          <div className="md:hidden">
-            <Sheet open={isMenuOpen} onOpenChange={setIsMenuOpen}>
+        {/* Mobile: Left - Menu */}
+        <div className="md:hidden flex-1 flex justify-start">
+           <Sheet open={isMenuOpen} onOpenChange={setIsMenuOpen}>
               <SheetTrigger asChild>
                 <Button variant="ghost" size="icon">
                   <Menu className="h-6 w-6 text-foreground" />
@@ -87,22 +83,26 @@ export default function SiteHeader() {
                 </nav>
               </SheetContent>
             </Sheet>
-          </div>
         </div>
 
-        {/* Center Section */}
-        <div className="flex-shrink-0">
-          <div className="hidden md:flex">
+        {/* Desktop: Left - Logo */}
+        <div className="hidden md:flex flex-1 justify-start">
+            <SiteLogo />
+        </div>
+
+        {/* Mobile: Center - Logo */}
+         <div className="md:hidden">
+             <SiteLogo />
+         </div>
+
+        {/* Desktop: Center - Navigation */}
+        <div className="hidden md:flex justify-center">
             <nav className="flex items-center gap-8">
               <NavLink href="/">Home</NavLink>
               <NavLink href="/destinations">Destinations</NavLink>
               <NavLink href="/about">About</NavLink>
               <NavLink href="/#guides">Guides</NavLink>
             </nav>
-          </div>
-          <div className="md:hidden">
-            <SiteLogo />
-          </div>
         </div>
         
         {/* Right Section */}
