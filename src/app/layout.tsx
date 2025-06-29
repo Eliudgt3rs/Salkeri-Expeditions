@@ -1,6 +1,7 @@
 import type {Metadata} from 'next';
 import {Toaster} from "@/components/ui/toaster";
 import './globals.css';
+import WhatsappButton from '@/components/whatsapp-button';
 
 export const metadata: Metadata = {
   title: 'Salkeri Expeditions | Unforgettable Safari Experiences',
@@ -22,6 +23,7 @@ export default function RootLayout({
       <body className="font-body antialiased">
         {children}
         <Toaster />
+        <WhatsappButton />
       </body>
     </html>
   );
