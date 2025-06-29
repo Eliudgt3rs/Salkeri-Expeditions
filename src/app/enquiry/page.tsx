@@ -133,11 +133,11 @@ export default function Enquiry() {
                             <FormControl>
                               <SelectTrigger>
                                 <SelectValue placeholder="Select a destination" />
-                              </SelectTrigger>
+                              </Trigger>
                             </FormControl>
                             <SelectContent>
                               {destinations.map((destination) => (
-                                <SelectItem key={destination.slug} value={destination.slug}>
+                                <SelectItem key={destination.slug} value={destination.title}>
                                   {destination.title}
                                 </SelectItem>
                               ))}
@@ -186,7 +186,7 @@ export default function Enquiry() {
                         </FormItem>
                       )}
                     />
-                  <Button type="submit" size="lg" className="w-full bg-primary hover:bg-primary/90 text-primary-foreground">Send Inquiry</Button>
+                  <Button type="submit" size="lg" className="w-full bg-accent hover:bg-accent/90 text-white">Send Inquiry</Button>
                 </form>
               </Form>
             </CardContent>

@@ -1,11 +1,24 @@
 import type {Metadata} from 'next';
+import { Playfair_Display, PT_Sans } from 'next/font/google';
 import {Toaster} from "@/components/ui/toaster";
 import './globals.css';
 import WhatsappButton from '@/components/whatsapp-button';
+import { cn } from '@/lib/utils';
+
+const fontHeadline = Playfair_Display({
+  subsets: ['latin'],
+  variable: '--font-headline',
+});
+
+const fontBody = PT_Sans({
+  subsets: ['latin'],
+  weight: ['400', '700'],
+  variable: '--font-body',
+});
 
 export const metadata: Metadata = {
   title: 'Salkeri Expeditions | Unforgettable Safari Experiences',
-  description: 'Boutique tour operator specializing in private, tailor-made safaris in Tanzania.',
+  description: 'Boutique tour operator specializing in private, tailor-made safaris in Tanzania & Kenya.',
 };
 
 export default function RootLayout({
@@ -15,12 +28,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="!scroll-smooth">
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css2?family=Gilda+Display&family=Barlow:wght@400;700&display=swap" rel="stylesheet" />
-      </head>
-      <body className="font-body antialiased">
+      <body className={cn(
+          "min-h-screen bg-background font-body antialiased",
+          fontHeadline.variable,
+          fontBody.variable
+        )}>
         {children}
         <Toaster />
         <WhatsappButton />

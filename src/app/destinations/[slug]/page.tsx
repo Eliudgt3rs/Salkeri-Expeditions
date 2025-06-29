@@ -5,11 +5,11 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { useState } from 'react';
 import SiteHeader from '@/components/site-header';
-import EnquiryModal from '@/components/enquiry';
-import Enquiry from '@/components/enquiry'; // Import the Enquiry component
+import Enquiry from '@/components/enquiry'; 
 import { destinations, Destination } from '@/lib/destinations';
 import { Button } from '@/components/ui/button';
 import { MessageSquare } from 'lucide-react';
+import SiteFooter from '@/components/site-footer';
 
 type Props = {
   params: { slug: string };
@@ -24,8 +24,6 @@ export default function DestinationDetailPage({ params }: Props) {
   }
 
   const [showAdditionalImages, setShowAdditionalImages] = useState(false);
-  const [isEnquiryModalOpen, setIsEnquiryModalOpen] = useState(false);
-  const [scrolledToContact, setScrolledToContact] = useState(false);
 
   const whatsappNumber = "+254719790026";
   const message = `Hello Salkeri Expeditions! I'm interested in planning a trip to ${destination.title}.`;
@@ -46,7 +44,7 @@ export default function DestinationDetailPage({ params }: Props) {
           />
           <div className="absolute inset-0 bg-black/60" />
           <div className="relative z-10 text-center text-white p-4">
-            <span className="text-lg font-bold uppercase text-primary tracking-widest">{destination.country}</span>
+            <span className="text-lg font-bold uppercase text-accent tracking-widest">{destination.country}</span>
             <h1 className="font-headline text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight">
               {destination.title}
             </h1>
@@ -56,7 +54,7 @@ export default function DestinationDetailPage({ params }: Props) {
         <section className="w-full py-16 md:py-24 lg:py-32">
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-3xl mx-auto">
-              <div className="prose prose-lg md:prose-xl prose-invert text-foreground/80 prose-headings:text-primary prose-headings:font-headline">
+              <div className="prose prose-lg md:prose-xl dark:prose-invert text-foreground/80 prose-headings:text-primary prose-headings:font-headline">
                 <p className="lead text-xl md:text-2xl !text-foreground/90 !mb-8">
                   {destination.description}
                 </p>
@@ -64,8 +62,8 @@ export default function DestinationDetailPage({ params }: Props) {
               </div>
 
               <div className="mt-12 text-center flex flex-col sm:flex-row items-center justify-center gap-4">
-                <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground" asChild>
-                  <Link href="#contact">
+                <Button size="lg" className="bg-accent hover:bg-accent/90 text-white" asChild>
+                  <Link href="/#contact">
                     Fill Enquiry Form
                   </Link>
                 </Button>
@@ -106,15 +104,10 @@ export default function DestinationDetailPage({ params }: Props) {
           </section>
         )}
 
-        {/* <EnquiryModal
-          isOpen={isEnquiryModalOpen}
-          onClose={() => setIsEnquiryModalOpen(false)}
-          defaultDestination={destination.title}
-        /> */}
+        <Enquiry defaultDestination={destination.title} />
 
-        <Enquiry defaultDestination={destination.title} /> {/* Add the Enquiry component here */}
       </main>
-      {/* <SiteFooter /> */}
+      <SiteFooter />
     </div>
   );
 }

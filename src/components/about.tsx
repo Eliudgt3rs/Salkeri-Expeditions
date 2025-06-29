@@ -18,13 +18,13 @@ export default function About() {
             <p className="text-lg text-foreground/80">
               Your journey is more than just a trip; it's a story waiting to be written. From the endless plains of the Serengeti to the pristine beaches of Zanzibar, we handle every detail with care, ensuring a seamless and extraordinary adventure.
             </p>
-            <Button size="lg" asChild className="bg-primary hover:bg-primary/90 text-primary-foreground">
+            <Button size="lg" asChild className="bg-accent hover:bg-accent/90 text-white">
               <Link href="/about">Learn More About Us</Link>
             </Button>
           </div>
           <div className="flex items-center justify-center">
             <Image
-              src="/hero.jpg"
+              src="https://placehold.co/600x450.png"
               alt="A lion resting in the Serengeti"
               width={600}
               height={450}

@@ -92,7 +92,7 @@ const CountdownOffer = () => {
           <div className="my-8 h-20 flex items-center justify-center">
             {renderCountdown()}
           </div>
-          <Button size="lg" asChild className="bg-primary hover:bg-primary/90 text-primary-foreground">
+          <Button size="lg" asChild className="bg-accent hover:bg-accent/90 text-white">
             <Link href="#contact">Claim Your Discount</Link>
           </Button>
         </div>

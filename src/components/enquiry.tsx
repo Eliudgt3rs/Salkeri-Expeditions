@@ -73,15 +73,18 @@ export default function Enquiry({ defaultDestination }: EnquiryProps) {
 
     const whatsappUrl = `https://wa.me/+254719790026?text=${encodedMessage}`;
     window.open(whatsappUrl, "_blank");
-
-    // Optional toast
-    // toast({ title: "Opening WhatsApp", description: "Redirecting to WhatsApp..." });
+    
+    toast({
+      title: "Inquiry Sent!",
+      description: "Redirecting you to WhatsApp to finalize your request.",
+      variant: "default",
+    });
 
     form.reset();
   }
 
   return (
-    <section id="contact" className="w-full py-16 md:py-24 lg:py-32 bg-card">
+    <section id="contact" className="w-full py-16 md:py-24 lg:py-32 bg-background">
       <div className="container mx-auto px-4 md:px-6">
         <div className="max-w-4xl mx-auto text-center mb-12">
           <h2 className="font-headline text-4xl md:text-5xl font-bold tracking-tighter text-primary">
@@ -92,7 +95,7 @@ export default function Enquiry({ defaultDestination }: EnquiryProps) {
           </p>
         </div>
 
-        <Card className="max-w-4xl mx-auto border-primary">
+        <Card className="max-w-4xl mx-auto border-primary bg-card">
           <CardContent className="p-8">
             <Form {...form}>
               <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
@@ -191,8 +194,8 @@ export default function Enquiry({ defaultDestination }: EnquiryProps) {
                   )}
                 />
 
-                <Button type="submit" size="lg" className="w-full bg-primary hover:bg-primary/90 text-primary-foreground">
-                  Send Inquiry
+                <Button type="submit" size="lg" className="w-full bg-accent hover:bg-accent/90 text-white">
+                  Send Inquiry via WhatsApp
                 </Button>
               </form>
             </Form>

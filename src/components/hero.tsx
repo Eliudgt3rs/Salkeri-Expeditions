@@ -13,6 +13,7 @@ export default function Hero() {
           muted
           playsInline
           className="w-full h-full object-cover"
+          poster="https://placehold.co/1920x1080.png"
         >
           <source src="/HeroVid.mp4" type="video/mp4" />
           Your browser does not support the video tag.
@@ -29,13 +30,13 @@ export default function Hero() {
           className="max-w-3xl mx-auto text-lg md:text-xl text-neutral-200 mb-8 animate-fade-in-up"
           style={{ animationDelay: '200ms', animationFillMode: 'backwards' }}
         >
-          We are a boutique tour operator specializing in private, tailor-made safaris in Tanzania.
+          We are a boutique tour operator specializing in private, tailor-made safaris in Tanzania & Kenya.
         </p>
         <div
           className="animate-fade-in-up"
            style={{ animationDelay: '400ms', animationFillMode: 'backwards' }}
         >
-          <Button size="lg" asChild className="bg-primary hover:bg-primary/90 text-primary-foreground">
+          <Button size="lg" asChild className="bg-accent hover:bg-accent/90 text-white">
             <Link href="#contact">Plan Your Trip</Link>
           </Button>
         </div>
