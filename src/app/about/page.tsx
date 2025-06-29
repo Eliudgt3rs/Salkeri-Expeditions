@@ -9,7 +9,7 @@ import WhyChooseUs from '@/components/why-choose-us';
 
 export default function AboutPage() {
   return (
-    <div className="flex min-h-screen flex-col bg-background">
+    <div className="flex min-h-screen flex-col bg-background overflow-x-hidden">
       <SiteHeader />
       <main className="flex-1">
         <section className="w-full pt-24 pb-16 md:pt-32 md:pb-24 lg:pt-40 lg:pb-32">
