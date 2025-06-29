@@ -6,6 +6,7 @@ import SiteHeader from '@/components/site-header';
 import SiteFooter from '@/components/site-footer';
 import { destinations } from '@/lib/destinations';
 import { Button } from '@/components/ui/button';
+import { MessageSquare } from 'lucide-react';
 
 type Props = {
   params: { slug: string };
@@ -24,6 +25,10 @@ export default function DestinationDetailPage({ params }: Props) {
   if (!destination) {
     notFound();
   }
+
+  const whatsappNumber = "255123456789"; 
+  const message = `Hello Salkeri Expeditions! I'm interested in planning a trip to ${destination.title}.`;
+  const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
 
   return (
     <div className="flex min-h-screen flex-col bg-background">
@@ -56,9 +61,15 @@ export default function DestinationDetailPage({ params }: Props) {
                 </p>
                 <p>{destination.longDescription}</p>
               </div>
-              <div className="mt-12 text-center">
+              <div className="mt-12 text-center flex flex-col sm:flex-row items-center justify-center gap-4">
                  <Button size="lg" asChild className="bg-primary hover:bg-primary/90 text-primary-foreground">
-                  <Link href="/#contact">Plan a Trip to {destination.title}</Link>
+                  <Link href="/#contact">Plan via Enquiry Form</Link>
+                </Button>
+                <Button size="lg" variant="outline" asChild>
+                  <Link href={whatsappUrl} target="_blank" rel="noopener noreferrer">
+                    <MessageSquare className="mr-2 h-5 w-5" />
+                    Plan via WhatsApp
+                  </Link>
                 </Button>
               </div>
             </div>

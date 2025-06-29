@@ -1,3 +1,4 @@
+
 import Link from 'next/link';
 
 const WhatsappIcon = () => (
@@ -28,7 +29,7 @@ export default function WhatsappButton() {
     >
       <WhatsappIcon />
        <div className="absolute right-full mr-4 px-3 py-2 text-sm font-medium text-white bg-gray-900 rounded-md shadow-sm opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
-        Chat on WhatsApp
+        Hi, how can I help?
       </div>
     </Link>
   );
