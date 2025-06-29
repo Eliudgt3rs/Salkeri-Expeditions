@@ -5,7 +5,7 @@ const WhatsappIcon = () => (
   <svg
     role="img"
     aria-label="WhatsApp"
-    className="h-8 w-8 text-white"
+    className="h-6 w-6 text-white"
     viewBox="0 0 24 24"
     xmlns="http://www.w3.org/2000/svg"
     fill="currentColor"
@@ -24,13 +24,13 @@ export default function WhatsappButton() {
       href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`}
       target="_blank"
       rel="noopener noreferrer"
-      className="fixed bottom-6 right-6 z-50 bg-[#25D366] hover:bg-[#128C7E] transition-colors text-white rounded-full p-3 shadow-lg flex items-center justify-center group"
+      className="fixed bottom-6 right-6 z-50 bg-[#25D366] hover:bg-[#128C7E] transition-colors text-white rounded-full py-2 px-4 shadow-lg flex items-center justify-center gap-2"
       aria-label="Contact us on WhatsApp"
     >
       <WhatsappIcon />
-       <div className="absolute right-full mr-4 px-3 py-2 text-sm font-medium text-white bg-gray-900 rounded-md shadow-sm opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+       <span className="text-sm font-medium whitespace-nowrap">
         Hi, how can I help?
-      </div>
+      </span>
     </Link>
   );
 }
