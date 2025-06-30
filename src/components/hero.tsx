@@ -1,7 +1,8 @@
 
 import { Button } from '@/components/ui/button';
-import { ArrowDown, Mouse } from 'lucide-react';
+import { Mouse } from 'lucide-react';
 import Link from 'next/link';
+import AISuggester from './ai-suggester';
 
 export default function Hero() {
   return (
@@ -33,12 +34,13 @@ export default function Hero() {
           We are a boutique tour operator specializing in private, tailor-made safaris in Tanzania & Kenya.
         </p>
         <div
-          className="animate-fade-in-up"
+          className="animate-fade-in-up flex flex-col sm:flex-row items-center justify-center gap-4"
            style={{ animationDelay: '400ms', animationFillMode: 'backwards' }}
         >
           <Button size="lg" asChild className="bg-accent hover:bg-accent/90 text-white">
             <Link href="/#contact">Plan Your Trip</Link>
           </Button>
+          <AISuggester />
         </div>
       </div>
       <div className="absolute bottom-10 left-1/2 -translate-x-1/2 z-10">
