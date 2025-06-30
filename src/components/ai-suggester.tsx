@@ -1,4 +1,3 @@
-
 "use client";
 
 import { useState } from "react";
@@ -90,9 +89,9 @@ export default function AISuggester() {
   return (
     <Dialog open={isOpen} onOpenChange={handleOpenChange}>
       <DialogTrigger asChild>
-        <Button size="lg" variant="outline">
+        <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
           <Wand2 className="mr-2 h-5 w-5" />
-          Get AI Suggestion
+          Find My Perfect Safari
         </Button>
       </DialogTrigger>
       <DialogContent className="max-w-sm sm:max-w-[480px] p-4 sm:p-6">
