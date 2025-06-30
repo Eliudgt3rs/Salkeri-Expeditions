@@ -25,26 +25,16 @@ const SiteLogo = () => (
 
 
 export default function SiteHeader() {
-  const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isDarkMode, setIsDarkMode] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
-
     const storedTheme = localStorage.getItem('theme');
     const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
     const initialThemeIsDark = storedTheme ? storedTheme === 'dark' : prefersDark;
 
     setIsDarkMode(initialThemeIsDark);
     document.documentElement.classList.toggle('dark', initialThemeIsDark);
-    
-    window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
   }, []);
 
   const toggleTheme = () => {
@@ -55,7 +45,7 @@ export default function SiteHeader() {
   };
 
   return (
-    <header className={`sticky top-0 z-50 w-full transition-all duration-300 ${isScrolled ? 'bg-background/95 backdrop-blur-sm shadow-md' : 'bg-transparent'}`}>
+    <header className="sticky top-0 z-50 w-full bg-background/95 backdrop-blur-sm shadow-md">
       <div className="container mx-auto flex h-20 items-center justify-between px-4 md:px-6">
 
         {/* Mobile: Left - Menu */}
