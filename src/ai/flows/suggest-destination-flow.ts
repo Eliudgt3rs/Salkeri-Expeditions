@@ -50,8 +50,21 @@ const suggestDestinationFlow = ai.defineFlow(
     outputSchema: SuggestDestinationOutputSchema,
   },
   async (input) => {
-    const { output } = await prompt(input);
-    return output!;
+    if (!process.env.GOOGLE_API_KEY) {
+      console.error("FATAL: GOOGLE_API_KEY environment variable is not set.");
+      throw new Error("The AI service is not configured. Please add the GOOGLE_API_KEY to your environment variables.");
+    }
+    
+    try {
+        const { output } = await prompt(input);
+        if (!output) {
+            throw new Error("The AI returned an empty response.");
+        }
+        return output;
+    } catch (e) {
+        console.error("Error during AI suggestion flow:", e);
+        throw new Error("An unexpected error occurred while getting your AI suggestion.");
+    }
   }
 );
 
