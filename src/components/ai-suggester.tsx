@@ -106,7 +106,7 @@ export default function AISuggester() {
           Find My Perfect Safari
         </Button>
       </DialogTrigger>
-      <DialogContent className="max-w-sm sm:max-w-[480px] p-4 sm:p-6">
+      <DialogContent className="rounded-lg max-w-[calc(100vw-2rem)] sm:max-w-[480px] p-4 sm:p-6">
         <DialogHeader>
           <DialogTitle>Find Your Perfect Safari</DialogTitle>
           <DialogDescription>
@@ -201,7 +201,7 @@ export default function AISuggester() {
                 </div>
                 <p className="text-foreground/80">{result.reasoning}</p>
                 <DialogFooter className="mt-6 flex-col sm:flex-row sm:justify-start gap-2">
-                    <Button asChild className="bg-primary hover:bg-primary/90 text-primary-foreground">
+                    <Button size="lg" asChild className="bg-primary hover:bg-primary/90 text-primary-foreground">
                         <Link href={`/destinations/${suggestedDestination.slug}`} onClick={() => setIsOpen(false)}>
                             Explore Destination
                         </Link>
