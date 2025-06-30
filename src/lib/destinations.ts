@@ -200,7 +200,7 @@ export const destinations: Destination[] = [
     country: 'Tanzania',
     description: 'Remote and beautiful, offering the best chimpanzee trekking in Africa.',
     longDescription: 'Set on the shores of the crystal-clear Lake Tanganyika, the Mahale Mountains are a remote paradise. The park\'s main attraction is the chance to track and observe a large population of habituated chimpanzees in their natural habitat. It\'s a magical experience combining forest trekking with lakeside relaxation.',
-    image: '/mahale-mountains-national-park.jpg',
+    image: '/Mahale-mountains-national-park.jpg',
     imageHint: 'chimpanzee tanzania',
     additionalImages: [
       '/mahale-mountains-national-park-1.jpg',
@@ -232,7 +232,7 @@ export const destinations: Destination[] = [
     country: 'Kenya',
     description: 'A collection of private and community conservancies at the forefront of conservation.',
     longDescription: 'Laikipia is a stunning success story of conservation, a patchwork of community and private wildlife reserves. It is a vital sanctuary for endangered species, including Grevy\'s zebra and black rhino. Laikipia offers a wide range of activities not typically found in national parks, such as night drives, horse riding, and camel treks.',
-    image: '/laikipiaPlateau.jpg',
+    image: '/LaikipiaPlateau.jpg',
     imageHint: 'kenya rhino',
     additionalImages: [
       '/destinations/laikipia-1.jpg',
