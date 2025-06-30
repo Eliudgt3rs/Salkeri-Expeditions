@@ -95,7 +95,7 @@ export default function AISuggester() {
           Get AI Suggestion
         </Button>
       </DialogTrigger>
-      <DialogContent className="sm:max-w-[480px]">
+      <DialogContent className="max-w-sm sm:max-w-[480px] p-4 sm:p-6">
         <DialogHeader>
           <DialogTitle>Find Your Perfect Safari</DialogTitle>
           <DialogDescription>
@@ -184,13 +184,13 @@ export default function AISuggester() {
         {result && suggestedDestination && (
             <div className="py-4">
                 <h3 className="text-lg font-semibold text-primary">Our Recommendation For You:</h3>
-                <h2 className="font-headline text-3xl my-2">{suggestedDestination.title}</h2>
+                <h2 className="font-headline text-2xl sm:text-3xl my-2">{suggestedDestination.title}</h2>
                 <div className="relative w-full h-48 my-4 rounded-lg overflow-hidden">
                     <Image src={suggestedDestination.image} alt={suggestedDestination.title} fill className="object-cover" />
                 </div>
                 <p className="text-foreground/80">{result.reasoning}</p>
                 <DialogFooter className="mt-6 flex-col sm:flex-row sm:justify-start gap-2">
-                    <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
+                    <Button asChild className="bg-primary hover:bg-primary/90 text-primary-foreground">
                         <Link href={`/destinations/${suggestedDestination.slug}`} onClick={() => setIsOpen(false)}>
                             Explore Destination
                         </Link>
