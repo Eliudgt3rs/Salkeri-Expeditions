@@ -61,12 +61,24 @@ export default function AISuggester() {
     setResult(null);
     try {
       const suggestion = await suggestDestination(values);
-      setResult(suggestion);
+
+      // Check for structured errors returned from the flow
+      if (suggestion.slug.startsWith('error-')) {
+        toast({
+          title: "Error",
+          description: suggestion.reasoning,
+          variant: "destructive",
+        });
+        setResult(null);
+      } else {
+        setResult(suggestion);
+      }
     } catch (error) {
+      // This catch block is now a fallback for network errors or unexpected issues.
       console.error("AI suggestion error:", error);
       toast({
         title: "Error",
-        description: "Could not get a suggestion. Please try again.",
+        description: "A network error occurred. Please check your connection and try again.",
         variant: "destructive",
       });
     } finally {
