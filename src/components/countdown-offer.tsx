@@ -87,7 +87,7 @@ const CountdownOffer = () => {
             Limited Time Offer
           </h2>
           <p className="mt-4 text-lg text-foreground/80">
-            Book your dream 2025 safari adventure before the end of the year and receive an exclusive 15% discount on any package.
+            Book your dream 2025 safari adventure before the end of the year and receive an exclusive 15% discount on most packages.
           </p>
           <div className="my-8 h-20 flex items-center justify-center">
             {renderCountdown()}
