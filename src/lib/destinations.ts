@@ -28,7 +28,7 @@ export const destinations: Destination[] = [
       '/destinations/serengeti-4.jpg',
     ],
     isPrime: true,
-    price: 1400,
+    price: 700,
   },
   {
     slug: 'maasai-mara-national-reserve',
@@ -45,7 +45,7 @@ export const destinations: Destination[] = [
       '/destinations/maasai-mara-4.jpg',
     ],
     isPrime: true,
-    price: 1100,
+    price: 1000,
   },
   {
     slug: 'ngorongoro-crater',
@@ -62,7 +62,7 @@ export const destinations: Destination[] = [
       '/destinations/ngorongoro-4.jpg',
     ],
     isPrime: true,
-    price: 1700,
+    price: 900,
   },
   {
     slug: 'amboseli-national-park',
@@ -96,7 +96,7 @@ export const destinations: Destination[] = [
       '/destinations/zanzibar-4.jpg',
     ],
     isPrime: true,
-    price: 1500,
+    price: 1200,
   },
   {
     slug: 'tarangire-national-park',
@@ -112,7 +112,7 @@ export const destinations: Destination[] = [
       '/destinations/tarangire-3.jpg',
       '/destinations/tarangire-4.jpg',
     ],
-    price: 1800,
+    price: 1100,
   },
   {
     slug: 'lake-nakuru-national-park',
@@ -128,7 +128,7 @@ export const destinations: Destination[] = [
       '/destinations/lake-nakuru-3.jpg',
       '/destinations/lake-nakuru-4.jpg',
     ],
-    price: 1700,
+    price: 700,
   },
   {
     slug: 'ruaha-national-park',
@@ -240,7 +240,7 @@ export const destinations: Destination[] = [
       '/destinations/laikipia-3.jpg',
       '/destinations/laikipia-4.jpg',
     ],
-    price: 400,
+    price: 1400,
   },
   {
     slug: 'gombe-stream-national-park',
@@ -288,7 +288,7 @@ export const destinations: Destination[] = [
       '/destinations/kilimanjaro-3.jpg',
       '/destinations/kilimanjaro-4.jpg',
     ],
-    price: 2500,
+    price: 1500,
   },
   {
     slug: 'katavi-national-park',
@@ -320,6 +320,6 @@ export const destinations: Destination[] = [
       '/destinations/mount-kenya-3.jpg',
       '/destinations/mount-kenya-4.jpg',
     ],
-    price: 900,
+    price: 1400,
   },
 ];
