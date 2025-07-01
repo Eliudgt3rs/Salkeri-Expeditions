@@ -19,7 +19,7 @@ export default function AboutPage() {
                 Our Story: The Heart of the Safari
               </h1>
               <p className="mt-6 text-lg md:text-xl text-foreground/80">
-                We are a professional, family-owned tour operator with a singular passion: sharing the magic of our homeland, Tanzania and Kenya, with the world. Our roots run deep in this soil, and our connection to its wildlife and communities is the foundation of every journey we craft.
+                We are a professional, family-owned tour operator with a singular passion: sharing the magic of our homeland, Tanzania and Kenya, with the world. Our roots run deep in this soil, and our connection to its wildlife and communities is the foundation of every journey we craft for you.
               </p>
             </div>
           </div>
