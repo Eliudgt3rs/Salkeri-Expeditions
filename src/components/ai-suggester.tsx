@@ -103,7 +103,7 @@ export default function AISuggester() {
       <DialogTrigger asChild>
         <Button size="lg" className="bg-accent hover:bg-accent/90 text-white">
           <Wand2 className="mr-2 h-5 w-5" />
-          Let AI Find Your Safari
+          Let AI Find Your Perfect Safari
         </Button>
       </DialogTrigger>
       <DialogContent className="rounded-lg max-w-[calc(100vw-2rem)] sm:max-w-[480px] p-4 sm:p-6">
