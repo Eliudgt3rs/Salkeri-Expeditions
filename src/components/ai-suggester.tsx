@@ -101,9 +101,9 @@ export default function AISuggester() {
   return (
     <Dialog open={isOpen} onOpenChange={handleOpenChange}>
       <DialogTrigger asChild>
-        <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
+        <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10 hover:shadow-[0_0_15px_rgba(255,255,255,0.4)] transition-shadow">
           <Wand2 className="mr-2 h-5 w-5" />
-          Find My Perfect Safari
+          Let AI Find Your Safari
         </Button>
       </DialogTrigger>
       <DialogContent className="rounded-lg max-w-[calc(100vw-2rem)] sm:max-w-[480px] p-4 sm:p-6">
