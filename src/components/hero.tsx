@@ -1,5 +1,4 @@
 
-import { Button } from '@/components/ui/button';
 import { Mouse } from 'lucide-react';
 import Link from 'next/link';
 import AISuggester from './ai-suggester';
@@ -37,9 +36,6 @@ export default function Hero() {
           className="animate-fade-in-up flex flex-col sm:flex-row items-center justify-center gap-4"
            style={{ animationDelay: '400ms', animationFillMode: 'backwards' }}
         >
-          <Button size="lg" asChild className="bg-accent hover:bg-accent/90 text-white">
-            <Link href="/#contact">Plan Your Trip</Link>
-          </Button>
           <AISuggester />
         </div>
       </div>
