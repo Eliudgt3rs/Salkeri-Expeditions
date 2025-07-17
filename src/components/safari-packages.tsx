@@ -19,7 +19,7 @@ export default function SafariPackages() {
           </p>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8">
-            {primeDestinations.map((dest) => (
+            {primeDestinations.map((dest, index) => (
                 <Card key={dest.slug} className="group h-full flex flex-col overflow-hidden bg-card border-border hover:border-primary transition-all duration-300">
                   <CardHeader className="p-0 relative">
                      <Link href={`/destinations/${dest.slug}`}>
@@ -30,6 +30,7 @@ export default function SafariPackages() {
                           height={400}
                           className="w-full h-72 object-cover group-hover:scale-105 transition-transform duration-500"
                           data-ai-hint={dest.imageHint}
+                          priority={index === 0}
                         />
                       </Link>
                   </CardHeader>
