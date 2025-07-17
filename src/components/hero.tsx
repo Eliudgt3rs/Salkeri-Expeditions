@@ -13,7 +13,7 @@ export default function Hero() {
           muted
           playsInline
           className="w-full h-full object-cover"
-          poster="https://placehold.co/1920x1080.png"
+          poster="/Serengeti.jpg"
         >
           <source src="/HeroVid.mp4" type="video/mp4" />
           Your browser does not support the video tag.
