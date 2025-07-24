@@ -13,9 +13,9 @@ export default function Hero() {
           muted
           playsInline
           className="w-full h-full object-cover"
-          poster="/HeroMain.png"
+          
         >
-          <source src="/Background.mp4" type="video/mp4" />
+          <source src="/HeroVid.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
         <div className="absolute inset-0 bg-black/60" />
